@@ -5,26 +5,23 @@
 ## 已复制的 docs_en 资料
 
 - `references/docs_en/usage_introduction.md`
-- `references/docs_en/demos/`
-  包含：
-  `douban_book_pics.md`
-  `login_gitee.md`
-  `maoyan_TOP100.md`
-  `multithreading_with_tabs.md`
-  `starbucks_pics.md`
-- `references/docs_en/get_start/`
-  包含：
-  `basic_concept.md`
-  `before_start.md`
-  `import.md`
-  `examples/control_browser.md`
-  `examples/data_packets.md`
-  `examples/switch_mode.md`
-- `references/docs_en/get_elements/`
-  包含：
-  `introduction.md`
-  `usage.md`
-  `not_found.md`
+- `references/docs_en/demos/`（5 个示例）
+  - `references/docs_en/demos/douban_book_pics.md`
+  - `references/docs_en/demos/login_gitee.md`
+  - `references/docs_en/demos/maoyan_TOP100.md`
+  - `references/docs_en/demos/multithreading_with_tabs.md`
+  - `references/docs_en/demos/starbucks_pics.md`
+- `references/docs_en/get_start/`（6 个文件）
+  - `references/docs_en/get_start/basic_concept.md`
+  - `references/docs_en/get_start/before_start.md`
+  - `references/docs_en/get_start/import.md`
+  - `references/docs_en/get_start/examples/control_browser.md`
+  - `references/docs_en/get_start/examples/data_packets.md`
+  - `references/docs_en/get_start/examples/switch_mode.md`
+- `references/docs_en/get_elements/`（3 个文件）
+  - `references/docs_en/get_elements/introduction.md`
+  - `references/docs_en/get_elements/usage.md`
+  - `references/docs_en/get_elements/not_found.md`
 - `references/docs_en/features/features_demos/switch_mode.md`
 
 ## 使用顺序
