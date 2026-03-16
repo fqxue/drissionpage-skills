@@ -41,9 +41,3 @@
 - `references/docs_zh/下载文件/`（4 个文件，含 README.md）— download 方法、浏览器下载
 - `references/docs_zh/进阶使用/`（9 个文件，含 README.md）— 全局设置、命令行、实用工具、异常处理、打包程序、数据读取加速、配置文件、与其它项目对接
 - `references/docs_zh/特性与示例/`（10 个文件，含 README.md）— 特性介绍、与 selenium/requests 对比、模式切换、下载文件、获取元素属性、版本功能介绍
-
-## 使用顺序
-
-1. 生成代码时，默认**优先**看 `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/`（示例/demo 最优先）。
-2. 示例不足时，**其次**查阅 `references/docs_zh/` 中文文档获取详细用法和参数说明。
-3. 中文文档未覆盖或需要对照时，**再其次**看 `references/docs_en/` 其余英文文档和源码。
