@@ -14,7 +14,7 @@
 - **Chrome DevTools MCP 负责**：DevTools 侧调试观察、性能/网络面板相关诊断能力。
 - **共享协议基础**：Chrome DevTools Protocol（CDP）。DrissionPage 可通过 `cdp()` 调用（见 `references/docs_zh/控制浏览器/🛰️ 页面交互.md`）。
 
-## 推荐协作流程（最小闭环）
+## 标准协作流程
 
 1. **DrissionPage 先复现**  
    用最小脚本稳定复现问题，并保留 URL、关键 selector、请求名、报错文本。
@@ -25,7 +25,10 @@
 4. **双向回归确认**  
    DrissionPage 再跑自动化流程；必要时让 MCP 复核关键网络请求与控制台状态。
 
-> 建议每一步都输出“工具 + 结论 + 下一步”，避免职责重叠。
+> 建议每一步都输出“工具 + 结论 + 下一步”，避免职责重叠。  
+> 例如：
+> - `工具: DrissionPage | 结论: 点击登录后页面无跳转，可稳定复现 | 下一步: 请 MCP 检查 Network/Console`
+> - `工具: MCP | 结论: login 接口 401，响应提示 token 过期 | 下一步: 回到 DrissionPage 增加登录态刷新后重试`
 
 ## 用户最小接入清单
 
