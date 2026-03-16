@@ -131,10 +131,10 @@ else:
 
 | 场景 | 正确对象 | demo 参考 |
 |------|----------|-----------|
-| 纯浏览器控制（登录、截图、缓存图片） | `ChromiumPage` | login_gitee, douban_book_pics, maoyan_TOP100 |
-| 纯请求/解析（无需浏览器） | `SessionPage` | starbucks_pics, data_packets |
-| 需要浏览器 + 请求双模式切换 | `WebPage` | switch_mode |
-| 多标签页操作 | `ChromiumPage` + `get_tab()` | multithreading_with_tabs |
+| 纯浏览器控制（登录、截图、缓存图片） | `ChromiumPage` | `demos/login_gitee.md`, `demos/douban_book_pics.md`, `demos/maoyan_TOP100.md` |
+| 纯请求/解析（无需浏览器） | `SessionPage` | `demos/starbucks_pics.md`, `get_start/examples/data_packets.md` |
+| 需要浏览器 + 请求双模式切换 | `WebPage` | `get_start/examples/switch_mode.md` |
+| 多标签页操作 | `ChromiumPage` + `get_tab()` | `demos/multithreading_with_tabs.md` |
 
 ### 8. 变量命名
 
@@ -200,7 +200,7 @@ page.download(img_url, r'.\imgs', rename=name)
   `ChromiumPage` 只负责浏览器控制；
   `SessionPage` 只负责请求/解析；
   `WebPage` 负责 d/s 双模式与 cookie 同步。
-- 生成示例代码时，默认先复用 demos 中已经验证过的写法，再按当前任务收缩或扩展，不要无依据自创新调用链。禁止生成与 demo 风格不一致的代码。
+- 生成示例代码时，默认先复用 demos 中已经验证过的写法，再按当前任务收缩或扩展，不要无依据自创新调用链。
 - 处理配置或安装问题时，优先参考 `setup.py`、`requirements.txt` 和实际代码；仓库内的 `pyproject.toml` 可能只是本地工作区配置，不要直接把它当成发布事实。
 - 需要与 `chrome-devtools-mcp` 协作时，优先复用 DrissionPage 的 CDP 能力（`references/docs_zh/控制浏览器/🛰️ 页面交互.md` 中 `cdp()` 方法），并说明当前步骤由 DrissionPage 还是 MCP 执行，避免职责混淆。
 - 默认采用“三段式协作”：① DrissionPage 复现并最小化自动化步骤 → ② MCP 做 DevTools 诊断（Network/Performance/Console）→ ③ 回到 DrissionPage 落地修复与回归验证。
