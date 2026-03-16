@@ -1,6 +1,6 @@
 # 文档映射与任务手册
 
-本文件只引用已经复制到当前 skill 内的资料，保证 `Skills/drissionpage-dev` 可单独上传使用。
+本文件只引用已经复制到当前 skill 内的资料，保证 `skills/drissionpage-dev` 可单独上传使用。
 
 ## 参考优先级
 
