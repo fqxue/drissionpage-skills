@@ -4,517 +4,517 @@
     "url": "https://www.drissionpage.cn/get_start/concept",
     "section": "入门指南",
     "file": "入门指南/☀️ 基本概念.md",
-    "markdown_length": 3829
+    "markdown_length": 3893
   },
   {
     "title": "❓ 常见问题",
     "url": "https://www.drissionpage.cn/tutorials/QandA",
     "section": "入门指南",
     "file": "入门指南/❓ 常见问题.md",
-    "markdown_length": 1983
+    "markdown_length": 2044
   },
   {
     "title": "🌏 准备工作",
     "url": "https://www.drissionpage.cn/get_start/before_start",
     "section": "入门指南",
     "file": "入门指南/🌏 准备工作.md",
-    "markdown_length": 1645
+    "markdown_length": 1713
   },
   {
     "title": "🌏 安装",
     "url": "https://www.drissionpage.cn/get_start/installation",
     "section": "入门指南",
     "file": "入门指南/🌏 安装.md",
-    "markdown_length": 320
+    "markdown_length": 386
   },
   {
     "title": "🌏 导入",
     "url": "https://www.drissionpage.cn/get_start/import",
     "section": "入门指南",
     "file": "入门指南/🌏 导入.md",
-    "markdown_length": 2560
+    "markdown_length": 2620
   },
   {
     "title": "🌏 设置语言 / Set Language",
     "url": "https://www.drissionpage.cn/get_start/set_lang",
     "section": "入门指南",
     "file": "入门指南/🌏 设置语言 _ Set Language.md",
-    "markdown_length": 233
+    "markdown_length": 312
   },
   {
     "title": "🗺️ 收发数据包",
     "url": "https://www.drissionpage.cn/get_start/examples/data_packets",
     "section": "入门指南",
     "file": "入门指南/🗺️ 收发数据包.md",
-    "markdown_length": 1837
+    "markdown_length": 1916
   },
   {
     "title": "🗺️ 模式切换",
     "url": "https://www.drissionpage.cn/get_start/examples/switch_mode",
     "section": "入门指南",
     "file": "入门指南/🗺️ 模式切换.md",
-    "markdown_length": 1776
+    "markdown_length": 1853
   },
   {
     "title": "🗺️ 自动登录",
     "url": "https://www.drissionpage.cn/get_start/examples/control_browser",
     "section": "入门指南",
     "file": "入门指南/🗺️ 自动登录.md",
-    "markdown_length": 1517
+    "markdown_length": 1598
   },
   {
     "title": "🌐 连接 TgeBrowser 指纹浏览器",
     "url": "https://www.drissionpage.cn/tutorials/TgeBrowser",
     "section": "控制浏览器",
     "file": "控制浏览器/🌐 连接 TgeBrowser 指纹浏览器.md",
-    "markdown_length": 9252
+    "markdown_length": 9333
   },
   {
     "title": "🔦 在结果列表中筛选",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/filter",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 在结果列表中筛选.md",
-    "markdown_length": 10958
+    "markdown_length": 11043
   },
   {
     "title": "🔦 定位语法",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/syntax",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 定位语法.md",
-    "markdown_length": 6645
+    "markdown_length": 6726
   },
   {
     "title": "🔦 概述",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/intro",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 概述.md",
-    "markdown_length": 1497
+    "markdown_length": 1575
   },
   {
     "title": "🔦 相对定位",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/relative",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 相对定位.md",
-    "markdown_length": 9783
+    "markdown_length": 9866
   },
   {
     "title": "🔦 简化写法",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/simplify",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 简化写法.md",
-    "markdown_length": 1250
+    "markdown_length": 1333
   },
   {
     "title": "🔦 行为模式",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/behavior",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 行为模式.md",
-    "markdown_length": 2337
+    "markdown_length": 2420
   },
   {
     "title": "🔦 语法速查表",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/sheet",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 语法速查表.md",
-    "markdown_length": 6343
+    "markdown_length": 6424
   },
   {
     "title": "🔦 页面或元素内查找",
     "url": "https://www.drissionpage.cn/browser_control/get_elements/find_in_object",
     "section": "控制浏览器",
     "file": "控制浏览器/🔦 页面或元素内查找.md",
-    "markdown_length": 8058
+    "markdown_length": 8151
   },
   {
     "title": "🛰️ Page 对象",
     "url": "https://www.drissionpage.cn/browser_control/pages",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ Page 对象.md",
-    "markdown_length": 1416
+    "markdown_length": 1487
   },
   {
     "title": "🛰️ iframe 操作",
     "url": "https://www.drissionpage.cn/browser_control/iframe",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ iframe 操作.md",
-    "markdown_length": 3006
+    "markdown_length": 3080
   },
   {
     "title": "🛰️ 上传文件",
     "url": "https://www.drissionpage.cn/browser_control/upload",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 上传文件.md",
-    "markdown_length": 2002
+    "markdown_length": 2071
   },
   {
     "title": "🛰️ 元素交互",
     "url": "https://www.drissionpage.cn/browser_control/ele_operation",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 元素交互.md",
-    "markdown_length": 15314
+    "markdown_length": 15390
   },
   {
     "title": "🛰️ 动作链",
     "url": "https://www.drissionpage.cn/browser_control/actions",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 动作链.md",
-    "markdown_length": 9446
+    "markdown_length": 9515
   },
   {
     "title": "🛰️ 截图和录像",
     "url": "https://www.drissionpage.cn/browser_control/screen",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 截图和录像.md",
-    "markdown_length": 3832
+    "markdown_length": 3902
   },
   {
     "title": "🛰️ 标签页管理",
     "url": "https://www.drissionpage.cn/browser_control/tabs",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 标签页管理.md",
-    "markdown_length": 3539
+    "markdown_length": 3607
   },
   {
     "title": "🛰️ 概述",
     "url": "https://www.drissionpage.cn/browser_control/intro",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 概述.md",
-    "markdown_length": 1880
+    "markdown_length": 1946
   },
   {
     "title": "🛰️ 模式切换",
     "url": "https://www.drissionpage.cn/browser_control/mode_change",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 模式切换.md",
-    "markdown_length": 1701
+    "markdown_length": 1775
   },
   {
     "title": "🛰️ 浏览器启动设置",
     "url": "https://www.drissionpage.cn/browser_control/browser_options",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 浏览器启动设置.md",
-    "markdown_length": 14231
+    "markdown_length": 14312
   },
   {
     "title": "🛰️ 浏览器对象",
     "url": "https://www.drissionpage.cn/browser_control/browser_object",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 浏览器对象.md",
-    "markdown_length": 9288
+    "markdown_length": 9366
   },
   {
     "title": "🛰️ 监听网络数据",
     "url": "https://www.drissionpage.cn/browser_control/listener",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 监听网络数据.md",
-    "markdown_length": 6580
+    "markdown_length": 6653
   },
   {
     "title": "🛰️ 等待",
     "url": "https://www.drissionpage.cn/browser_control/waiting",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 等待.md",
-    "markdown_length": 12658
+    "markdown_length": 12726
   },
   {
     "title": "🛰️ 获取元素信息",
     "url": "https://www.drissionpage.cn/browser_control/get_ele_info",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 获取元素信息.md",
-    "markdown_length": 6992
+    "markdown_length": 7069
   },
   {
     "title": "🛰️ 获取控制台信息",
     "url": "https://www.drissionpage.cn/browser_control/console",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 获取控制台信息.md",
-    "markdown_length": 1620
+    "markdown_length": 1693
   },
   {
     "title": "🛰️ 获取网页信息",
     "url": "https://www.drissionpage.cn/browser_control/get_page_info",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 获取网页信息.md",
-    "markdown_length": 4771
+    "markdown_length": 4849
   },
   {
     "title": "🛰️ 访问网页",
     "url": "https://www.drissionpage.cn/browser_control/visit",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 访问网页.md",
-    "markdown_length": 4853
+    "markdown_length": 4921
   },
   {
     "title": "🛰️ 连接浏览器",
     "url": "https://www.drissionpage.cn/browser_control/connect_browser",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 连接浏览器.md",
-    "markdown_length": 7731
+    "markdown_length": 7810
   },
   {
     "title": "🛰️ 页面交互",
     "url": "https://www.drissionpage.cn/browser_control/page_operation",
     "section": "控制浏览器",
     "file": "控制浏览器/🛰️ 页面交互.md",
-    "markdown_length": 16071
+    "markdown_length": 16148
   },
   {
     "title": "🥦 创建全新的浏览器",
     "url": "https://www.drissionpage.cn/tutorials/functions/new_browser",
     "section": "控制浏览器",
     "file": "控制浏览器/🥦 创建全新的浏览器.md",
-    "markdown_length": 1143
+    "markdown_length": 1224
   },
   {
     "title": "🥦 无头模式",
     "url": "https://www.drissionpage.cn/tutorials/functions/headless",
     "section": "控制浏览器",
     "file": "控制浏览器/🥦 无头模式.md",
-    "markdown_length": 255
+    "markdown_length": 329
   },
   {
     "title": "🥦 浏览器多开",
     "url": "https://www.drissionpage.cn/tutorials/functions/create_browsers",
     "section": "控制浏览器",
     "file": "控制浏览器/🥦 浏览器多开.md",
-    "markdown_length": 938
+    "markdown_length": 1020
   },
   {
     "title": "🥦 设置 cookies",
     "url": "https://www.drissionpage.cn/tutorials/functions/set_cookies",
     "section": "控制浏览器",
     "file": "控制浏览器/🥦 设置 cookies.md",
-    "markdown_length": 1809
+    "markdown_length": 1892
   },
   {
     "title": "🛩️ 创建页面对象",
     "url": "https://www.drissionpage.cn/SessionPage/create_obj",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 创建页面对象.md",
-    "markdown_length": 1980
+    "markdown_length": 2051
   },
   {
     "title": "🛩️ 启动配置",
     "url": "https://www.drissionpage.cn/SessionPage/session_opt",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 启动配置.md",
-    "markdown_length": 7138
+    "markdown_length": 7208
   },
   {
     "title": "🛩️ 查找元素",
     "url": "https://www.drissionpage.cn/SessionPage/get_ele",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 查找元素.md",
-    "markdown_length": 6747
+    "markdown_length": 6813
   },
   {
     "title": "🛩️ 概述",
     "url": "https://www.drissionpage.cn/SessionPage/intro",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 概述.md",
-    "markdown_length": 978
+    "markdown_length": 1040
   },
   {
     "title": "🛩️ 获取元素信息",
     "url": "https://www.drissionpage.cn/SessionPage/get_ele_info",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 获取元素信息.md",
-    "markdown_length": 4218
+    "markdown_length": 4291
   },
   {
     "title": "🛩️ 获取页面信息",
     "url": "https://www.drissionpage.cn/SessionPage/get_page_info",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 获取页面信息.md",
-    "markdown_length": 2343
+    "markdown_length": 2417
   },
   {
     "title": "🛩️ 访问网页",
     "url": "https://www.drissionpage.cn/SessionPage/visit",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 访问网页.md",
-    "markdown_length": 4576
+    "markdown_length": 4640
   },
   {
     "title": "🛩️ 页面设置",
     "url": "https://www.drissionpage.cn/SessionPage/settings",
     "section": "SessionPage",
     "file": "SessionPage/🛩️ 页面设置.md",
-    "markdown_length": 4362
+    "markdown_length": 4429
   },
   {
     "title": "⤵️ download方法",
     "url": "https://www.drissionpage.cn/download/DownloadKit",
     "section": "下载文件",
     "file": "下载文件/⤵️ download方法.md",
-    "markdown_length": 3913
+    "markdown_length": 3986
   },
   {
     "title": "⤵️ 概述",
     "url": "https://www.drissionpage.cn/download/intro",
     "section": "下载文件",
     "file": "下载文件/⤵️ 概述.md",
-    "markdown_length": 981
+    "markdown_length": 1040
   },
   {
     "title": "⤵️ 浏览器下载",
     "url": "https://www.drissionpage.cn/download/browser",
     "section": "下载文件",
     "file": "下载文件/⤵️ 浏览器下载.md",
-    "markdown_length": 6367
+    "markdown_length": 6431
   },
   {
     "title": "⚙️ 与其它项目对接",
     "url": "https://www.drissionpage.cn/advance/docking",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 与其它项目对接.md",
-    "markdown_length": 1392
+    "markdown_length": 1457
   },
   {
     "title": "⚙️ 全局设置",
     "url": "https://www.drissionpage.cn/advance/settings",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 全局设置.md",
-    "markdown_length": 2458
+    "markdown_length": 2521
   },
   {
     "title": "⚙️ 命令行的使用",
     "url": "https://www.drissionpage.cn/advance/commands",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 命令行的使用.md",
-    "markdown_length": 946
+    "markdown_length": 1011
   },
   {
     "title": "⚙️ 实用工具",
     "url": "https://www.drissionpage.cn/advance/tools",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 实用工具.md",
-    "markdown_length": 2164
+    "markdown_length": 2224
   },
   {
     "title": "⚙️ 异常的使用",
     "url": "https://www.drissionpage.cn/advance/errors",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 异常的使用.md",
-    "markdown_length": 1066
+    "markdown_length": 1128
   },
   {
     "title": "⚙️ 打包程序",
     "url": "https://www.drissionpage.cn/advance/packaging",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 打包程序.md",
-    "markdown_length": 1907
+    "markdown_length": 1971
   },
   {
     "title": "⚙️ 数据读取加速",
     "url": "https://www.drissionpage.cn/advance/accelerate",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 数据读取加速.md",
-    "markdown_length": 1759
+    "markdown_length": 1826
   },
   {
     "title": "⚙️ 配置文件的使用",
     "url": "https://www.drissionpage.cn/advance/ini",
     "section": "进阶使用",
     "file": "进阶使用/⚙️ 配置文件的使用.md",
-    "markdown_length": 2901
+    "markdown_length": 2962
   },
   {
     "title": "⭐ 下载文件",
     "url": "https://www.drissionpage.cn/features/features_demos/download",
     "section": "特性与示例",
     "file": "特性与示例/⭐ 下载文件.md",
-    "markdown_length": 230
+    "markdown_length": 308
   },
   {
     "title": "⭐ 与 requests 对比",
     "url": "https://www.drissionpage.cn/features/features_demos/requests",
     "section": "特性与示例",
     "file": "特性与示例/⭐ 与 requests 对比.md",
-    "markdown_length": 990
+    "markdown_length": 1077
   },
   {
     "title": "⭐ 与 selenium 对比",
     "url": "https://www.drissionpage.cn/features/features_demos/selenium",
     "section": "特性与示例",
     "file": "特性与示例/⭐ 与 selenium 对比.md",
-    "markdown_length": 1780
+    "markdown_length": 1867
   },
   {
     "title": "⭐ 模式切换",
     "url": "https://www.drissionpage.cn/features/features_demos/change_mode",
     "section": "特性与示例",
     "file": "特性与示例/⭐ 模式切换.md",
-    "markdown_length": 447
+    "markdown_length": 528
   },
   {
     "title": "⭐ 获取元素属性",
     "url": "https://www.drissionpage.cn/features/features_demos/get_ele_attr",
     "section": "特性与示例",
     "file": "特性与示例/⭐ 获取元素属性.md",
-    "markdown_length": 429
+    "markdown_length": 513
   },
   {
     "title": "💖 特性",
     "url": "https://www.drissionpage.cn/features",
     "section": "特性与示例",
     "file": "特性与示例/💖 特性.md",
-    "markdown_length": 2138
+    "markdown_length": 2190
   },
   {
     "title": "💥 3.2 功能介绍",
     "url": "https://www.drissionpage.cn/features/3",
     "section": "特性与示例",
     "file": "特性与示例/💥 3.2 功能介绍.md",
-    "markdown_length": 7177
+    "markdown_length": 7237
   },
   {
     "title": "💥 4.0 功能介绍",
     "url": "https://www.drissionpage.cn/features/4",
     "section": "特性与示例",
     "file": "特性与示例/💥 4.0 功能介绍.md",
-    "markdown_length": 15981
+    "markdown_length": 16041
   },
   {
     "title": "💥 4.1 功能介绍",
     "url": "https://www.drissionpage.cn/features/4.1",
     "section": "特性与示例",
     "file": "特性与示例/💥 4.1 功能介绍.md",
-    "markdown_length": 2673
+    "markdown_length": 2735
   },
   {
     "title": "🌠 豆瓣图书封面下载",
-    "url": "",
+    "url": "https://www.drissionpage.cn/demos/douban_book_pics",
     "section": "实战示例",
     "file": "实战示例/🌠 豆瓣图书封面下载.md",
-    "markdown_length": 1692
+    "markdown_length": 989
   },
   {
     "title": "🌠 Gitee 自动登录",
-    "url": "",
+    "url": "https://www.drissionpage.cn/demos/login_gitee",
     "section": "实战示例",
     "file": "实战示例/🌠 Gitee 自动登录.md",
-    "markdown_length": 2112
+    "markdown_length": 1239
   },
   {
     "title": "🌠 猫眼电影TOP100采集",
-    "url": "",
+    "url": "https://www.drissionpage.cn/demos/maoyan_TOP100",
     "section": "实战示例",
     "file": "实战示例/🌠 猫眼电影TOP100采集.md",
-    "markdown_length": 2309
+    "markdown_length": 1504
   },
   {
     "title": "🌠 星巴克图片下载",
-    "url": "",
+    "url": "https://www.drissionpage.cn/demos/starbucks_pics",
     "section": "实战示例",
     "file": "实战示例/🌠 星巴克图片下载.md",
-    "markdown_length": 2125
+    "markdown_length": 1294
   },
   {
     "title": "🌠 多线程多标签页采集",
-    "url": "",
+    "url": "https://www.drissionpage.cn/demos/multithreading_with_tabs",
     "section": "实战示例",
     "file": "实战示例/🌠 多线程多标签页采集.md",
-    "markdown_length": 3253
+    "markdown_length": 2220
   }
 ]
