@@ -148,6 +148,12 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 2. 在你的 AI 客户端内安装并启用 `chrome-devtools-mcp`；
 3. 提示 AI 同时使用本 skill 与 `chrome-devtools-mcp`，并要求输出步骤级工具分工。
 
+推荐采用三段式协作：
+
+1. 先由 DrissionPage 复现并最小化自动化步骤；
+2. 再由 `chrome-devtools-mcp` 做 DevTools 诊断（Console / Network / Performance）；
+3. 最后回到 DrissionPage 落地修复并回归验证。
+
 详细说明见：`skills/drissionpage-dev/references/chrome-devtools-mcp.md`
 
 ## 参考示例
