@@ -45,16 +45,6 @@ skills/
                 └── features_demos/ # 特性演示（模式切换）
 ```
 
-## 核心文件说明
-
-| 文件 | 用途 |
-|------|------|
-| `SKILL.md` | 技能入口，定义了 AI 处理 DrissionPage 任务的完整流程、规则和验证方式 |
-| `architecture.md` | 快速了解 DrissionPage 包结构、三大 Page 对象关系和改动检查清单 |
-| `docs-map.md` | 根据任务类型快速映射到对应的参考文档，包含常见任务的执行步骤 |
-| `bundled-materials.md` | 列出所有已复制到技能包内的文档（docs_en 和 docs_zh），确保脱离原仓库也能独立工作 |
-| `chrome-devtools-mcp.md` | Chrome DevTools MCP 协作与接入说明，含协作流程和交接模板 |
-
 ## 安装
 
 本仓库遵循 [Agent Skills 规范](https://agentskills.io/specification)，可用于 Claude Code、Codex CLI、OpenCode 等兼容技能的 AI 编程助手。
@@ -132,43 +122,17 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 ## 参考优先级
 
-编写代码时，按以下优先级查阅参考资料：
-
-1. **示例 / Demo 最优先（强制）** — `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/`。**编写 DrissionPage 代码时必须参考 demo 示例并严格遵循其代码风格。**
-2. **中文文档其次** — `references/docs_zh/`（入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例）
-3. **英文文档补充** — `references/docs_en/` 其余文件
+详见 [`SKILL.md` 参考优先级](skills/drissionpage-dev/SKILL.md#参考优先级)。
 
 ## 与 Chrome DevTools MCP 协作
 
-本技能包可与 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 配合使用。
+本技能包可与 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 配合使用，DrissionPage 负责自动化流程，MCP 负责 DevTools 侧调试诊断，两者通过 CDP 互补。
 
-- DrissionPage 负责自动化流程与页面操作；
-- Chrome DevTools MCP 负责 DevTools 侧调试与诊断；
-- 两者可基于 CDP 能力互补（DrissionPage 参考 `cdp()` 相关文档）。
-
-接入方式：
-
-1. 先按上文安装本 skill；
-2. 在你的 AI 客户端内安装并启用 `chrome-devtools-mcp`；
-3. 提示 AI 同时使用本 skill 与 `chrome-devtools-mcp`，并要求输出步骤级工具分工。
-
-推荐采用三段式协作：
-
-1. 先由 DrissionPage 复现并最小化自动化步骤；
-2. 再由 `chrome-devtools-mcp` 做 DevTools 诊断（Console / Network / Performance）；
-3. 最后回到 DrissionPage 落地修复并回归验证。
-
-详细说明见：`skills/drissionpage-dev/references/chrome-devtools-mcp.md`
+详细协作流程、接入清单和交接模板见：[`chrome-devtools-mcp.md`](skills/drissionpage-dev/references/chrome-devtools-mcp.md)
 
 ## 参考示例
 
-技能包内置了多个实战示例（位于 `references/docs_en/demos/`）：
-
-- **豆瓣图书封面下载** — 演示 `save()` 方法直接从浏览器缓存保存图片
-- **Gitee 自动登录** — 演示浏览器控制进行表单填写和提交
-- **猫眼 TOP100 采集** — 演示数据抓取和结构化处理
-- **多线程多标签页采集** — 演示 `get_tab()` 配合多线程同时操控多个标签页
-- **星巴克产品图片下载** — 演示 `download()` 方法下载网络资源
+技能包内置了多个实战示例（位于 `references/docs_en/demos/`），涵盖图片下载、自动登录、数据采集、多线程多标签页等场景。
 
 ## 贡献指南
 

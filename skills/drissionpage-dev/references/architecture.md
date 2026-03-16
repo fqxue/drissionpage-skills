@@ -50,23 +50,6 @@
 - `DrissionPage/_functions/texts.py`
   文本与语言相关输出；修改报错文本或提示时可检查这里。
 
-## 文档与代码的联动点
-
-编写代码时按优先级查阅：**① 示例/demo → ② 中文文档(docs_zh) → ③ 英文文档(docs_en)**
-
-- `references/docs_en/demos/`
-  默认最优先参考的代码示例来源。
-- `references/docs_en/get_start/examples/`
-  基础示例和模式切换示例。
-- `references/docs_zh/`
-  完整中文文档，包含入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例六大板块。示例不足时优先查阅。
-- `references/docs_en/get_start/`
-  安装、导入、基础概念、启动前准备。
-- `references/docs_en/get_elements/`
-  locator 和找元素语法。
-- `references/docs_en/features/features_demos/`
-  补充特性示例，当前包含 `switch_mode.md`。
-
 ## 改动检查清单
 
 1. 是否影响公开导入路径或构造参数。

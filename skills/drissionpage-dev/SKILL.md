@@ -220,18 +220,3 @@ dp --configs-to-here
 
 - 涉及浏览器行为时，补一个最小可复现场景，明确浏览器路径、端口、配置文件或本地环境前提。
 - 如果源码行为与 `references/docs_zh/` 或 `references/docs_en/` 中的副本不一致，优先指出差异；若仓库内原始文档也存在，再决定是否同步修正文档。
-
-## 参考文件
-
-- `references/architecture.md`
-  用于快速了解包结构、三大 Page 对象关系、配置/CLI 入口、以及改 API 时的联动点。
-- `references/docs-map.md`
-  用于把任务快速映射到已复制进 skill 的文档副本，并给出常见改动的执行顺序。
-- `references/bundled-materials.md`
-  列出已复制到 skill 内的资料清单，便于脱离仓库单独上传时核对。
-- `references/chrome-devtools-mcp.md`
-  Chrome DevTools MCP 与 DrissionPage 的协作与接入说明，含最小接入清单。
-- `references/docs_en/`
-  保存从当前仓库复制进来的英文文档资料。默认优先查 `demos/`，其次查 `get_start/`、`get_elements/` 和 `features/features_demos/`。
-- `references/docs_zh/`
-  保存从 DrissionPage 中文站点整理的完整中文文档。包含入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例六大板块。优先级高于 `docs_en/`（示例除外）。
