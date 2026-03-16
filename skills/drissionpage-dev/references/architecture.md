@@ -25,17 +25,39 @@ DrissionPage/
 
 ## 三大 Page 对象关系
 
-```
-                ┌─────────────────┐
-                │   SessionPage   │  纯请求/解析
-                │  requests/parse │
-                └────────┬────────┘
-                         │ 继承
-                         ▼
-┌─────────────────┐   ┌──────────┐
-│  ChromiumPage   │   │ WebPage  │  d/s 双模式
-│  浏览器控制/CDP │──▶│ 切换+同步 │
-└─────────────────┘   └──────────┘
+```mermaid
+classDiagram
+    class ChromiumPage {
+        +浏览器控制 / CDP
+        +标签页管理
+        +窗口 / 下载
+        +_PAGES 单例缓存
+        +get()
+        +ele() / eles()
+    }
+
+    class SessionPage {
+        +请求 / 解析
+        +requests / response
+        +headers / cookies
+        +get() / post()
+        +ele() / eles()
+    }
+
+    class WebPage {
+        +d/s 双模式切换
+        +cookie 同步
+        +change_mode()
+        +cookies_to_session()
+        +cookies_to_browser()
+        +get() / post()
+        +ele() / eles()
+    }
+
+    SessionPage <|-- WebPage : 继承
+    ChromiumPage <|-- WebPage : 继承
+    WebPage ..> SessionPage : cookie 同步
+    WebPage ..> ChromiumPage : cookie 同步
 ```
 
 - **`ChromiumPage`**：纯浏览器控制对象；负责标签页、窗口、下载、CDP 相关能力。实现里有 `_PAGES` 单例缓存，修改构造逻辑时要谨慎。
@@ -63,6 +85,51 @@ DrissionPage/
 | `_functions/tools.py` | 端口寻找、配置复制、错误转换 | `configs_to_here()` 生成 `dp_configs.ini` |
 | `_functions/cli.py` | `dp` 命令入口 | 浏览器路径、用户目录、配置文件 |
 | `_functions/texts.py` | 文本与语言输出 | 报错文本、提示信息 |
+
+## 模块依赖关系
+
+```mermaid
+graph TB
+    subgraph Public["📦 公开入口"]
+        INIT["__init__.py / .pyi"]
+        VERSION["version.py"]
+    end
+
+    subgraph Pages["📄 _pages/ 页面对象"]
+        CP["chromium_page.py"]
+        SP["session_page.py"]
+        WP["web_page.py"]
+        CT["chromium_tab.py"]
+        MT["mix_tab.py"]
+    end
+
+    subgraph Core["🔧 核心模块"]
+        BASE["_base/<br/>底层基类"]
+        ELEM["_elements/<br/>元素对象"]
+        CONF["_configs/<br/>配置"]
+        UNITS["_units/<br/>setter/waiter/rect"]
+    end
+
+    subgraph Functions["⚙️ _functions/ 工具函数"]
+        LOC["locator.py<br/>⚠️ 定位语法"]
+        TOOLS["tools.py<br/>⚠️ 通用工具"]
+        CLI["cli.py<br/>dp 命令"]
+        TEXTS["texts.py<br/>文本输出"]
+    end
+
+    INIT --> Pages
+    Pages --> BASE
+    Pages --> ELEM
+    Pages --> CONF
+    Pages --> Functions
+    Pages --> UNITS
+    ELEM --> Functions
+
+    style Public fill:#e8eaf6,stroke:#3f51b5
+    style Pages fill:#e3f2fd,stroke:#1565c0
+    style Core fill:#e8f5e9,stroke:#2e7d32
+    style Functions fill:#fff3e0,stroke:#ef6c00
+```
 
 ## 改动检查清单
 

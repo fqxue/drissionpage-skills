@@ -183,6 +183,34 @@ page.download(img_url, r'.\imgs', rename=name)
 
 ## 快速流程
 
+```mermaid
+flowchart TD
+    START["🎯 收到 DrissionPage 任务"] --> JUDGE{"判断改动落点"}
+
+    JUDGE -->|"页面对象 / 模式切换"| A["📖 读 architecture.md<br/>→ _pages/"]
+    JUDGE -->|"元素定位 / 解析"| B["📖 读 locator.py<br/>→ _elements/"]
+    JUDGE -->|"配置 / CLI"| C["📖 读 _configs/<br/>→ cli.py / tools.py"]
+    JUDGE -->|"示例 / 文档"| D["📖 读 docs_en/demos/<br/>→ docs_zh/"]
+
+    A --> VERIFY
+    B --> VERIFY
+    C --> VERIFY
+    D --> VERIFY
+
+    VERIFY["📋 以源码为准核对文档"] --> CHANGE["✏️ 局部化改动"]
+    CHANGE --> SYNC{"需要同步？"}
+    SYNC -->|"是"| SYNC_FILES[".pyi / __init__ / docs"]
+    SYNC -->|"否"| TEST
+    SYNC_FILES --> TEST["✅ Smoke Test 验证"]
+
+    style START fill:#e8eaf6,stroke:#3f51b5,color:#1a237e
+    style JUDGE fill:#fff3e0,stroke:#ef6c00,color:#e65100
+    style VERIFY fill:#e1f5fe,stroke:#0288d1,color:#01579b
+    style CHANGE fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style SYNC fill:#fce4ec,stroke:#c62828,color:#b71c1c
+    style TEST fill:#e0f2f1,stroke:#00695c,color:#004d40
+```
+
 1. 先判断改动落点，再读取最小必要文件。
 - 页面对象与模式切换：读 `references/architecture.md`，再看 `DrissionPage/_pages/`。
 - 元素定位与解析：看 `DrissionPage/_functions/locator.py`、`DrissionPage/_elements/`，必要时对照 `references/docs_zh/控制浏览器/` 和 `references/docs_en/get_elements/`。

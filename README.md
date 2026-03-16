@@ -1,8 +1,19 @@
-# DrissionPage Skills
+<div align="center">
 
-> 为 AI 编程助手提供的 [DrissionPage](https://github.com/g1879/DrissionPage) 开发技能包，帮助 AI 更准确地理解和操作 DrissionPage 源码、文档与调试任务。
->
-> An AI Agent Skill package for [DrissionPage](https://github.com/g1879/DrissionPage) — a Python-based web automation library. This skill helps AI assistants generate high-quality DrissionPage code by providing structured documentation, demos, and coding conventions.
+# 🌐 DrissionPage Skills
+
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-compatible-blue?style=for-the-badge&logo=github)](https://agentskills.io/specification)
+[![DrissionPage](https://img.shields.io/badge/DrissionPage-4.x-green?style=for-the-badge&logo=python&logoColor=white)](https://github.com/g1879/DrissionPage)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-supported-blueviolet?style=for-the-badge)](https://claude.ai)
+[![Codex CLI](https://img.shields.io/badge/Codex_CLI-supported-orange?style=for-the-badge)](https://github.com/openai/codex)
+
+**为 AI 编程助手提供的 [DrissionPage](https://github.com/g1879/DrissionPage) 开发技能包**
+帮助 AI 更准确地理解和操作 DrissionPage 源码、文档与调试任务。
+
+*An AI Agent Skill package for [DrissionPage](https://github.com/g1879/DrissionPage) — a Python-based web automation library.*
+*This skill helps AI assistants generate high-quality DrissionPage code by providing structured documentation, demos, and coding conventions.*
+
+</div>
 
 ---
 
@@ -30,6 +41,29 @@
 - 🔄 正确同步 API 变更涉及的所有联动文件
 
 DrissionPage 是一个基于 Python 的网页自动化工具库，整合了数据包收发和浏览器控制两种模式，提供 `ChromiumPage`、`SessionPage` 和 `WebPage` 三种核心页面对象。
+
+### 技能包能力总览
+
+```mermaid
+mindmap
+  root((DrissionPage<br/>Skills))
+    📖 文档参考
+      中文文档 77 篇
+      英文文档 16 篇
+      实战 Demo 5 个
+    🏗️ 架构指引
+      包结构速览
+      对象关系图
+      高影响模块
+    📐 代码规范
+      10 条强制风格
+      Demo 驱动写法
+      命名与注释
+    🔧 工具协作
+      Chrome DevTools MCP
+      CDP 协议互补
+      三段式协作流程
+```
 
 ## 快速开始
 
@@ -102,8 +136,20 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 ### AI 工作流程概览
 
-```
-判断改动落点 → 读取最小必要文件 → 以源码为准核对文档 → 改动局部化 → 同步联动文件 → 验证
+```mermaid
+flowchart LR
+    A["🎯 判断改动落点"] --> B["📂 读取最小必要文件"]
+    B --> C["📋 以源码为准<br/>核对文档"]
+    C --> D["✏️ 改动局部化"]
+    D --> E["🔗 同步联动文件"]
+    E --> F["✅ 验证"]
+
+    style A fill:#e1f5fe,stroke:#0288d1,color:#01579b
+    style B fill:#f3e5f5,stroke:#7b1fa2,color:#4a148c
+    style C fill:#fff3e0,stroke:#ef6c00,color:#e65100
+    style D fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style E fill:#fce4ec,stroke:#c62828,color:#b71c1c
+    style F fill:#e0f2f1,stroke:#00695c,color:#004d40
 ```
 
 详细流程参见 [`SKILL.md`](skills/drissionpage-dev/SKILL.md)。
@@ -143,6 +189,25 @@ skills/
 
 ## DrissionPage 核心概念
 
+```mermaid
+graph TB
+    subgraph DrissionPage["🌐 DrissionPage 核心对象"]
+        CP["🖥️ <b>ChromiumPage</b><br/>纯浏览器控制<br/>标签页 / 窗口 / 下载 / CDP"]
+        SP["📡 <b>SessionPage</b><br/>纯请求/解析<br/>requests / response / headers"]
+        WP["🔄 <b>WebPage</b><br/>双模式 (d/s)<br/>浏览器控制 + 请求解析"]
+    end
+
+    CP -->|"继承能力"| WP
+    SP -->|"继承能力"| WP
+    WP -.->|"cookie 同步"| CP
+    WP -.->|"cookie 同步"| SP
+
+    style CP fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    style SP fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    style WP fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#e65100
+    style DrissionPage fill:#fafafa,stroke:#bdbdbd,stroke-width:1px
+```
+
 | 对象 | 职责 | 典型场景 |
 |------|------|----------|
 | `ChromiumPage` | 纯浏览器控制，负责标签页、窗口、下载、CDP | 自动登录、截图、缓存图片 |
@@ -153,9 +218,21 @@ skills/
 
 编写代码时，按以下优先级查阅参考资料：
 
-1. **⭐ 示例 / Demo 优先（强制）**：先查 `docs_en/demos/` 和 `docs_en/get_start/examples/`
-2. **📖 中文文档其次**：查阅 `docs_zh/` 获取详细说明和参数语义
-3. **📄 英文文档补充**：中文文档未覆盖时，再查 `docs_en/` 的其余文件
+```mermaid
+flowchart TD
+    START["🤖 AI 编写 DrissionPage 代码"] --> P1
+
+    P1["⭐ <b>优先级 1：示例 / Demo</b><br/><code>docs_en/demos/</code><br/><code>docs_en/get_start/examples/</code>"]
+    P1 -->|"示例不足时"| P2
+    P2["📖 <b>优先级 2：中文文档</b><br/><code>docs_zh/</code> 全部栏目"]
+    P2 -->|"中文未覆盖时"| P3
+    P3["📄 <b>优先级 3：英文文档</b><br/><code>docs_en/</code> 其余文件"]
+
+    style START fill:#f5f5f5,stroke:#9e9e9e,color:#424242
+    style P1 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style P2 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#01579b
+    style P3 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px,color:#4a148c
+```
 
 详见 [`SKILL.md` 参考优先级](skills/drissionpage-dev/SKILL.md#参考优先级)。
 
@@ -177,9 +254,25 @@ skills/
 
 本技能包可与 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 配合使用：
 
-- **DrissionPage**：负责自动化流程（页面控制、元素定位、下载、等待）
-- **Chrome DevTools MCP**：负责 DevTools 侧调试诊断（Console/Network/Performance）
-- **协作基础**：Chrome DevTools Protocol（CDP）
+```mermaid
+flowchart LR
+    subgraph DP["🐍 DrissionPage"]
+        A1["页面控制"]
+        A2["元素定位"]
+        A3["下载/等待"]
+    end
+
+    subgraph MCP["🔧 Chrome DevTools MCP"]
+        B1["Console 诊断"]
+        B2["Network 分析"]
+        B3["Performance 检测"]
+    end
+
+    DP <-->|"CDP 协议"| MCP
+
+    style DP fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style MCP fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+```
 
 详细协作流程、接入清单和交接模板见：[`chrome-devtools-mcp.md`](skills/drissionpage-dev/references/chrome-devtools-mcp.md)
 
