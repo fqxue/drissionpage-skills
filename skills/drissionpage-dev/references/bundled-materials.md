@@ -1,6 +1,6 @@
 # 已打包资料清单
 
-这些文件已经从当前仓库复制到 skill 内，保证 `Skills/drissionpage-dev` 单独上传后仍可使用。
+这些文件已经从当前仓库复制到 skill 内，保证 `skills/drissionpage-dev` 单独上传后仍可使用。
 
 ## 已复制的 docs_en 资料（英文文档）
 

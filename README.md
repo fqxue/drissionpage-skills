@@ -16,7 +16,7 @@ DrissionPage 是一个基于 Python 的网页自动化工具库，整合了数�
 ## 目录结构
 
 ```
-Skills/
+skills/
 └── drissionpage-dev/
     ├── SKILL.md                    # 技能定义文件（入口）
     ├── agents/
@@ -87,7 +87,7 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/driss
 git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/drissionpage-skills
 ```
 
-请不要只复制内部 `Skills/` 目录，需保留完整仓库结构，确保技能入口路径为 `.../drissionpage-skills/Skills/drissionpage-dev/SKILL.md`。
+请不要只复制内部 `skills/` 目录，需保留完整仓库结构，确保技能入口路径为 `.../drissionpage-skills/skills/drissionpage-dev/SKILL.md`。
 
 ### 项目内引用（可选）
 
@@ -95,9 +95,9 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 ```markdown
 处理 DrissionPage 相关任务时，优先参考：
-1. Skills/drissionpage-dev/references/docs_en/demos/
-2. Skills/drissionpage-dev/references/docs_zh/
-3. Skills/drissionpage-dev/references/docs_en/ 其余文件
+1. skills/drissionpage-dev/references/docs_en/demos/
+2. skills/drissionpage-dev/references/docs_zh/
+3. skills/drissionpage-dev/references/docs_en/ 其余文件
 ```
 
 ### 触发条件
@@ -116,7 +116,7 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 判断改动落点 → 读取最小必要文件 → 以源码为准核对文档 → 改动局部化 → 同步联动文件 → 验证
 ```
 
-详细流程参见 [`SKILL.md`](Skills/drissionpage-dev/SKILL.md)。
+详细流程参见 [`SKILL.md`](skills/drissionpage-dev/SKILL.md)。
 
 ## DrissionPage 核心概念
 
