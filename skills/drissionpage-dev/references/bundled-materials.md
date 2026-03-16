@@ -23,6 +23,7 @@
   - `references/docs_en/get_elements/usage.md`
   - `references/docs_en/get_elements/not_found.md`
 - `references/docs_en/features/features_demos/switch_mode.md`
+- `references/chrome-devtools-mcp.md`
 
 ## 已复制的 docs_zh 资料（中文文档）
 

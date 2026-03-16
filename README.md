@@ -134,6 +134,22 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 2. **中文文档其次** — `references/docs_zh/`（入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例）
 3. **英文文档补充** — `references/docs_en/` 其余文件
 
+## 与 Chrome DevTools MCP 协作
+
+本技能包可与 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) 配合使用。
+
+- DrissionPage 负责自动化流程与页面操作；
+- Chrome DevTools MCP 负责 DevTools 侧调试与诊断；
+- 两者可基于 CDP 能力互补（DrissionPage 参考 `cdp()` 相关文档）。
+
+接入方式：
+
+1. 先按上文安装本 skill；
+2. 在你的 AI 客户端内安装并启用 `chrome-devtools-mcp`；
+3. 提示 AI 同时使用本 skill 与 `chrome-devtools-mcp`，并要求输出步骤级工具分工。
+
+详细说明见：`skills/drissionpage-dev/references/chrome-devtools-mcp.md`
+
 ## 参考示例
 
 技能包内置了多个实战示例（位于 `references/docs_en/demos/`）：

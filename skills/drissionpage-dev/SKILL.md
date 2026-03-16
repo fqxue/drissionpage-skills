@@ -42,6 +42,7 @@ description: 针对 DrissionPage 仓库进行源码阅读、功能修改、调�
   `WebPage` 负责 d/s 双模式与 cookie 同步。
 - 生成示例代码时，默认先复用 demos 中已经验证过的写法，再按当前任务收缩或扩展，不要无依据自创新调用链。
 - 处理配置或安装问题时，优先参考 `setup.py`、`requirements.txt` 和实际代码；仓库内的 `pyproject.toml` 可能只是本地工作区配置，不要直接把它当成发布事实。
+- 需要与 `chrome-devtools-mcp` 协作时，优先复用 DrissionPage 的 CDP 能力（`references/docs_zh/控制浏览器/🛰️ 页面交互.md` 中 `cdp()` 方法），并说明当前步骤由 DrissionPage 还是 MCP 执行，避免职责混淆。
 
 ## 验证方式
 
@@ -64,6 +65,8 @@ dp --configs-to-here
   用于快速了解包结构、三大 Page 对象关系、配置/CLI 入口、以及改 API 时的联动点。
 - `references/docs-map.md`
   用于把任务快速映射到已复制进 skill 的文档副本，并给出常见改动的执行顺序。
+- `references/chrome-devtools-mcp.md`
+  Chrome DevTools MCP 与 DrissionPage 的协作与接入说明，含最小接入清单。
 - `references/docs_en/`
   保存从当前仓库复制进来的英文文档资料。默认优先查 `demos/`，其次查 `get_start/`、`get_elements/` 和 `features/features_demos/`。
 - `references/docs_zh/`

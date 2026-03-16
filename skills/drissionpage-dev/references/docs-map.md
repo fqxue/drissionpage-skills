@@ -35,6 +35,9 @@
   `references/docs_zh/下载文件/`（中文优先）
 - 看进阶用法（全局设置、命令行、打包、异常等）：
   `references/docs_zh/进阶使用/`（中文优先）
+- 看 Chrome DevTools MCP 协作与接入：
+  `references/chrome-devtools-mcp.md`
+  `references/docs_zh/控制浏览器/🛰️ 页面交互.md`（`cdp()` 方法）
 
 ## 常见任务执行顺序
 
