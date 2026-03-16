@@ -2,38 +2,23 @@
 
 本文件只引用已经复制到当前 skill 内的资料，保证 `skills/drissionpage-dev` 可单独上传使用。
 
-## 文档映射
+## 快速查找表
 
-- 看代码生成示例，**最优先**：
-  `references/docs_en/demos/`
-  `references/docs_en/get_start/examples/`
-- 看对象关系或选型：
-  `references/docs_zh/入门指南/☀️ 基本概念.md`（中文优先）
-  `references/docs_en/usage_introduction.md`
-  `references/docs_en/get_start/basic_concept.md`
-- 看浏览器启动和配置：
-  `references/docs_zh/控制浏览器/🛰️ 浏览器启动设置.md`（中文优先）
-  `references/docs_zh/控制浏览器/🛰️ 连接浏览器.md`
-  `references/docs_en/get_start/before_start.md`
-  `references/docs_en/get_start/import.md`
-- 看元素定位和查找失败：
-  `references/docs_zh/控制浏览器/🔦 定位语法.md`（中文优先）
-  `references/docs_zh/控制浏览器/🔦 页面或元素内查找.md`
-  `references/docs_en/get_elements/introduction.md`
-  `references/docs_en/get_elements/usage.md`
-  `references/docs_en/get_elements/not_found.md`
-- 看 `WebPage` 或模式切换补充示例：
-  `references/docs_zh/入门指南/🗺️ 模式切换.md`（中文优先）
-  `references/docs_en/features/features_demos/switch_mode.md`
-- 看 SessionPage 相关：
-  `references/docs_zh/SessionPage/`（中文优先）
-- 看下载文件：
-  `references/docs_zh/下载文件/`（中文优先）
-- 看进阶用法（全局设置、命令行、打包、异常等）：
-  `references/docs_zh/进阶使用/`（中文优先）
-- 看 Chrome DevTools MCP 协作与接入：
-  `references/chrome-devtools-mcp.md`
-  `references/docs_zh/控制浏览器/🛰️ 页面交互.md`（`cdp()` 方法）
+> 根据你要做的事情，直接找到对应文档。
+
+| 我想要… | 首选文档 | 补充文档 |
+|---------|----------|----------|
+| 看代码示例写法 | `docs_en/demos/`、`docs_en/get_start/examples/` | — |
+| 了解对象关系/选型 | `docs_zh/入门指南/☀️ 基本概念.md` | `docs_en/usage_introduction.md`、`docs_en/get_start/basic_concept.md` |
+| 配置浏览器启动 | `docs_zh/控制浏览器/🛰️ 浏览器启动设置.md` | `docs_zh/控制浏览器/🛰️ 连接浏览器.md`、`docs_en/get_start/before_start.md` |
+| 定位元素/查找失败 | `docs_zh/控制浏览器/🔦 定位语法.md` | `docs_zh/控制浏览器/🔦 页面或元素内查找.md`、`docs_en/get_elements/` |
+| WebPage / 模式切换 | `docs_zh/入门指南/🗺️ 模式切换.md` | `docs_en/features/features_demos/switch_mode.md` |
+| SessionPage 用法 | `docs_zh/SessionPage/` | — |
+| 下载文件 | `docs_zh/下载文件/` | — |
+| 全局设置/命令行/打包 | `docs_zh/进阶使用/` | — |
+| DevTools MCP 协作 | `chrome-devtools-mcp.md` | `docs_zh/控制浏览器/🛰️ 页面交互.md`（`cdp()` 方法） |
+
+> 以上路径均相对于 `references/`。所有文档查阅遵循"中文优先"原则。
 
 ## 常见任务执行顺序
 
@@ -74,10 +59,8 @@
 
 ## 验证建议
 
-- 纯导入/签名改动：
-  `python -c "from DrissionPage import ChromiumPage, SessionPage, WebPage"`
-- 打包或入口改动：
-  `python -m build`
-  `dp --configs-to-here`
-- 浏览器相关改动：
-  构造一个最小 `ChromiumPage()` 或 `WebPage()` 场景，记录本地浏览器与端口前提。
+| 改动类型 | 验证命令 |
+|----------|----------|
+| 纯导入/签名改动 | `python -c "from DrissionPage import ChromiumPage, SessionPage, WebPage"` |
+| 打包或入口改动 | `python -m build` 和 `dp --configs-to-here` |
+| 浏览器相关改动 | 构造最小 `ChromiumPage()` 或 `WebPage()` 场景，记录本地浏览器与端口前提 |
