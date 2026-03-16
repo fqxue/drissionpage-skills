@@ -42,29 +42,6 @@
 
 DrissionPage 是一个基于 Python 的网页自动化工具库，整合了数据包收发和浏览器控制两种模式，提供 `ChromiumPage`、`SessionPage` 和 `WebPage` 三种核心页面对象。
 
-### 技能包能力总览
-
-```mermaid
-mindmap
-  root((DrissionPage<br/>Skills))
-    📖 文档参考
-      中文文档 77 篇
-      英文文档 16 篇
-      实战 Demo 5 个
-    🏗️ 架构指引
-      包结构速览
-      对象关系图
-      高影响模块
-    📐 代码规范
-      10 条强制风格
-      Demo 驱动写法
-      命名与注释
-    🔧 工具协作
-      Chrome DevTools MCP
-      CDP 协议互补
-      三段式协作流程
-```
-
 ## 快速开始
 
 本仓库遵循 [Agent Skills 规范](https://agentskills.io/specification)，可用于 Claude Code、Codex CLI、OpenCode 等兼容技能的 AI 编程助手。
