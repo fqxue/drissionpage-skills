@@ -135,6 +135,6 @@ graph TB
 
 1. 是否影响公开导入路径或构造参数。
 2. 是否需要同步 `.pyi`。
-3. 是否影响 `references/docs_zh/` 或 `references/docs_en/` 中的示例或参数说明。
+3. 是否影响 `references/docs/` 中的示例或参数说明。
 4. 是否破坏 `WebPage` 的模式语义或 cookie 同步。
 5. 是否影响 `dp` CLI 或 `dp_configs.ini` 生成流程。

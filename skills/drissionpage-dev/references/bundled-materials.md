@@ -11,27 +11,19 @@
 | `references/chrome-devtools-mcp.md` | Chrome DevTools MCP 协作与接入说明 |
 | `references/bundled-materials.md` | 本文件，已打包资料清单 |
 
-## docs_en 英文文档（16 个文件）
+## docs 参考文档（83 个文件）
+
+已将原 docs_zh（中文文档）和 docs_en（英文文档）合并为统一的中文参考文档目录 `docs/`。英文文档中的独有内容（实战示例等）已翻译整合为中文。
 
 | 目录 | 文件数 | 内容 |
 |------|--------|------|
-| `docs_en/` | 1 | `usage_introduction.md` |
-| `docs_en/demos/` | 5 | 实战示例：豆瓣图书、Gitee 登录、猫眼 TOP100、多线程标签页、星巴克图片 |
-| `docs_en/get_start/` | 3 | `basic_concept.md`、`before_start.md`、`import.md` |
-| `docs_en/get_start/examples/` | 3 | `control_browser.md`、`data_packets.md`、`switch_mode.md` |
-| `docs_en/get_elements/` | 3 | `introduction.md`、`usage.md`、`not_found.md` |
-| `docs_en/features/features_demos/` | 1 | `switch_mode.md` |
-
-## docs_zh 中文文档（77 个文件）
-
-| 目录 | 文件数 | 内容 |
-|------|--------|------|
-| `docs_zh/` | 2 | `README.md`、`index.json` |
-| `docs_zh/入门指南/` | 10 | 安装、导入、基本概念、准备工作、设置语言、常见问题、收发数据包、模式切换、自动登录 |
-| `docs_zh/控制浏览器/` | 33 | 连接浏览器、Page 对象、元素交互、定位语法、标签页管理、截图录像、监听网络数据、动作链、等待、iframe、指纹浏览器等 |
-| `docs_zh/SessionPage/` | 9 | 创建页面对象、启动配置、查找元素、获取元素/页面信息、访问网页、页面设置 |
-| `docs_zh/下载文件/` | 4 | download 方法、浏览器下载 |
-| `docs_zh/进阶使用/` | 9 | 全局设置、命令行、实用工具、异常处理、打包程序、数据读取加速、配置文件、与其它项目对接 |
-| `docs_zh/特性与示例/` | 10 | 特性介绍、与 selenium/requests 对比、模式切换、下载文件、获取元素属性、版本功能介绍 |
+| `docs/` | 2 | `README.md`、`index.json` |
+| `docs/实战示例/` | 6 | ⭐ **最优先参考**：豆瓣图书封面下载、Gitee 自动登录、猫眼 TOP100 采集、星巴克图片下载、多线程多标签页采集 |
+| `docs/入门指南/` | 10 | 安装、导入、基本概念、准备工作、设置语言、常见问题、收发数据包、模式切换、自动登录 |
+| `docs/控制浏览器/` | 33 | 连接浏览器、Page 对象、元素交互、定位语法、标签页管理、截图录像、监听网络数据、动作链、等待、iframe、指纹浏览器等 |
+| `docs/SessionPage/` | 9 | 创建页面对象、启动配置、查找元素、获取元素/页面信息、访问网页、页面设置 |
+| `docs/下载文件/` | 4 | download 方法、浏览器下载 |
+| `docs/进阶使用/` | 9 | 全局设置、命令行、实用工具、异常处理、打包程序、数据读取加速、配置文件、与其它项目对接 |
+| `docs/特性与示例/` | 10 | 特性介绍、与 selenium/requests 对比、模式切换、下载文件、获取元素属性、版本功能介绍 |
 
 > 所有目录文件数含 README.md 索引文件。

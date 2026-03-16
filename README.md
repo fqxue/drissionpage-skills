@@ -48,16 +48,16 @@ DrissionPage 是一个基于 Python 的网页自动化工具库，整合了数�
 mindmap
   root((DrissionPage<br/>Skills))
     📖 文档参考
-      中文文档 77 篇
-      英文文档 16 篇
-      实战 Demo 5 个
+      统一中文文档 83 文件
+      实战示例 5 个
+      入门示例 3 个
     🏗️ 架构指引
       包结构速览
       对象关系图
       高影响模块
     📐 代码规范
       10 条强制风格
-      Demo 驱动写法
+      示例驱动写法
       命名与注释
     🔧 工具协作
       Chrome DevTools MCP
@@ -118,9 +118,9 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 ```markdown
 处理 DrissionPage 相关任务时，优先参考：
-1. skills/drissionpage-dev/references/docs_en/demos/
-2. skills/drissionpage-dev/references/docs_zh/
-3. skills/drissionpage-dev/references/docs_en/ 其余文件
+1. skills/drissionpage-dev/references/docs/实战示例/
+2. skills/drissionpage-dev/references/docs/入门指南/
+3. skills/drissionpage-dev/references/docs/ 其余栏目
 ```
 
 ### 触发条件
@@ -168,23 +168,16 @@ skills/
         ├── docs-map.md             # 文档映射与常见任务执行手册
         ├── bundled-materials.md    # 已打包到 Skill 内的资料清单
         ├── chrome-devtools-mcp.md  # Chrome DevTools MCP 协作与接入说明
-        ├── docs_zh/                # 中文文档（77 个文件）
-        │   ├── README.md
-        │   ├── index.json          # 文档索引（含标题、URL、字数）
-        │   ├── 入门指南/           # 安装、导入、基本概念等（10 个文件）
-        │   ├── 控制浏览器/         # 浏览器控制、定位语法等（33 个文件）
-        │   ├── SessionPage/        # SessionPage 相关（9 个文件）
-        │   ├── 下载文件/           # 下载相关（4 个文件）
-        │   ├── 进阶使用/           # 全局设置、命令行、打包等（9 个文件）
-        │   └── 特性与示例/         # 特性介绍与对比（10 个文件）
-        └── docs_en/                # 英文文档（16 个文件）
-            ├── usage_introduction.md
-            ├── demos/              # ⭐ 实战示例（最优先参考）
-            ├── get_start/          # 入门指南
-            │   └── examples/       # ⭐ 基础示例（最优先参考）
-            ├── get_elements/       # 元素定位与查找语法
-            └── features/
-                └── features_demos/ # 特性演示
+        └── docs/                   # 统一中文参考文档（83 个文件）
+            ├── README.md
+            ├── index.json          # 文档索引（含标题、URL、字数）
+            ├── 实战示例/           # ⭐ 最优先参考（6 个文件）
+            ├── 入门指南/           # 安装、导入、基本概念等（10 个文件）
+            ├── 控制浏览器/         # 浏览器控制、定位语法等（33 个文件）
+            ├── SessionPage/        # SessionPage 相关（9 个文件）
+            ├── 下载文件/           # 下载相关（4 个文件）
+            ├── 进阶使用/           # 全局设置、命令行、打包等（9 个文件）
+            └── 特性与示例/         # 特性介绍与对比（10 个文件）
 ```
 
 ## DrissionPage 核心概念
@@ -216,17 +209,17 @@ graph TB
 
 ## 参考优先级
 
-编写代码时，按以下优先级查阅参考资料：
+编写代码时，按以下优先级查阅参考资料（所有文档均为中文）：
 
 ```mermaid
 flowchart TD
     START["🤖 AI 编写 DrissionPage 代码"] --> P1
 
-    P1["⭐ <b>优先级 1：示例 / Demo</b><br/><code>docs_en/demos/</code><br/><code>docs_en/get_start/examples/</code>"]
+    P1["⭐ <b>优先级 1：实战示例</b><br/><code>docs/实战示例/</code>"]
     P1 -->|"示例不足时"| P2
-    P2["📖 <b>优先级 2：中文文档</b><br/><code>docs_zh/</code> 全部栏目"]
-    P2 -->|"中文未覆盖时"| P3
-    P3["📄 <b>优先级 3：英文文档</b><br/><code>docs_en/</code> 其余文件"]
+    P2["📖 <b>优先级 2：入门指南</b><br/><code>docs/入门指南/</code>"]
+    P2 -->|"仍不满足时"| P3
+    P3["📄 <b>优先级 3：各栏目文档</b><br/><code>docs/</code> 其余栏目"]
 
     style START fill:#f5f5f5,stroke:#9e9e9e,color:#424242
     style P1 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
@@ -238,17 +231,17 @@ flowchart TD
 
 ## 内置示例
 
-技能包内置了多个实战示例（位于 `references/docs_en/demos/`）：
+技能包内置了多个实战示例（位于 `references/docs/实战示例/`）：
 
 | 示例 | 场景 | 使用对象 |
 |------|------|----------|
-| `douban_book_pics.md` | 豆瓣图书封面下载 | `ChromiumPage` |
-| `login_gitee.md` | Gitee 自动登录 | `ChromiumPage` |
-| `maoyan_TOP100.md` | 猫眼电影 TOP100 采集 | `ChromiumPage` |
-| `starbucks_pics.md` | 星巴克图片下载 | `SessionPage` |
-| `multithreading_with_tabs.md` | 多线程多标签页 | `ChromiumPage` + `get_tab()` |
+| `🌠 豆瓣图书封面下载.md` | 浏览器缓存图片直接保存 | `ChromiumPage` |
+| `🌠 Gitee 自动登录.md` | 浏览器控制自动登录 | `ChromiumPage` |
+| `🌠 猫眼电影TOP100采集.md` | 浏览器翻页数据采集 | `ChromiumPage` |
+| `🌠 星巴克图片下载.md` | 数据包模式图片下载 | `SessionPage` |
+| `🌠 多线程多标签页采集.md` | 多线程 + 多标签页并发 | `ChromiumPage` + `get_tab()` |
 
-更多基础示例见 `references/docs_en/get_start/examples/`。
+更多入门示例见 `references/docs/入门指南/`（自动登录、收发数据包、模式切换）。
 
 ## 与 Chrome DevTools MCP 协作
 

@@ -14,8 +14,8 @@
 
 ### 文档更新
 
-- 新增或更新 `references/docs_en/` 或 `references/docs_zh/` 下的文档副本时，**必须**同步更新 `bundled-materials.md` 中的清单
-- 新增中文文档时，同步更新 `references/docs_zh/index.json`（使用 POSIX 路径分隔符 `/`）
+- 新增或更新 `references/docs/` 下的文档时，**必须**同步更新 `bundled-materials.md` 中的清单
+- 新增文档时，同步更新 `references/docs/index.json`（使用 POSIX 路径分隔符 `/`）
 - 文档文件名直接使用标题（含 emoji 前缀），与官网保持一致
 
 ### 工作流程与规则

@@ -1,4 +1,4 @@
 interface:
   display_name: "DrissionPage 开发"
-  short_description: "基于 demo 示例、docs_zh 与 docs_en 的 DrissionPage 开发协作；优先参考 demo，其次中文文档，最后英文文档，非必要不阅读源码"
-  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。编写 DrissionPage 代码时必须严格参考 demos 示例的代码风格（references/docs_en/demos/ 和 references/docs_en/get_start/examples/），不允许偏离 demo 已验证的写法。其次参考中文文档(docs_zh)，再其次参考英文文档(docs_en)，非必要不阅读源码。"
+  short_description: "基于统一中文参考文档的 DrissionPage 开发协作；优先参考实战示例，其次各栏目文档，非必要不阅读源码"
+  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。编写 DrissionPage 代码时必须严格参考实战示例的代码风格（references/docs/实战示例/），不允许偏离示例已验证的写法。其次参考各栏目文档（references/docs/），非必要不阅读源码。"
