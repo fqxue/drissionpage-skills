@@ -24,6 +24,15 @@ __pycache__/
 dist/
 build/
 *.egg
+.venv/
+venv/
+*.whl
+
+# Node.js (npx skills 安装时可能产生)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Temporary files
 tmp/
