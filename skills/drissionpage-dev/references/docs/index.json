@@ -481,5 +481,40 @@
     "section": "特性与示例",
     "file": "特性与示例/💥 4.1 功能介绍.md",
     "markdown_length": 2673
+  },
+  {
+    "title": "🌠 豆瓣图书封面下载",
+    "url": "",
+    "section": "实战示例",
+    "file": "实战示例/🌠 豆瓣图书封面下载.md",
+    "markdown_length": 1692
+  },
+  {
+    "title": "🌠 Gitee 自动登录",
+    "url": "",
+    "section": "实战示例",
+    "file": "实战示例/🌠 Gitee 自动登录.md",
+    "markdown_length": 2112
+  },
+  {
+    "title": "🌠 猫眼电影TOP100采集",
+    "url": "",
+    "section": "实战示例",
+    "file": "实战示例/🌠 猫眼电影TOP100采集.md",
+    "markdown_length": 2309
+  },
+  {
+    "title": "🌠 星巴克图片下载",
+    "url": "",
+    "section": "实战示例",
+    "file": "实战示例/🌠 星巴克图片下载.md",
+    "markdown_length": 2125
+  },
+  {
+    "title": "🌠 多线程多标签页采集",
+    "url": "",
+    "section": "实战示例",
+    "file": "实战示例/🌠 多线程多标签页采集.md",
+    "markdown_length": 3253
   }
 ]

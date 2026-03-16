@@ -12,7 +12,7 @@
 
 - **DrissionPage 负责**：`ChromiumPage` / `WebPage` 自动化流程、元素操作、下载、等待、模式切换。
 - **Chrome DevTools MCP 负责**：DevTools 侧调试观察、性能/网络面板相关诊断能力。
-- **共享协议基础**：Chrome DevTools Protocol（CDP）。DrissionPage 可通过 `cdp()` 调用（见 `references/docs_zh/控制浏览器/🛰️ 页面交互.md`）。
+- **共享协议基础**：Chrome DevTools Protocol（CDP）。DrissionPage 可通过 `cdp()` 调用（见 `references/docs/控制浏览器/🛰️ 页面交互.md`）。
 
 ## 标准协作流程
 
