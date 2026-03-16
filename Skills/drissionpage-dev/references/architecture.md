@@ -52,15 +52,18 @@
 
 ## 文档与代码的联动点
 
-- skill 内已复制的文档副本在 `references/docs_en/`。
+编写代码时按优先级查阅：**① 示例/demo → ② 中文文档(docs_zh) → ③ 英文文档(docs_en)**
+
+- `references/docs_en/demos/`
+  默认最优先参考的代码示例来源。
+- `references/docs_en/get_start/examples/`
+  基础示例和模式切换示例。
+- `references/docs_zh/`
+  完整中文文档，包含入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例六大板块。示例不足时优先查阅。
 - `references/docs_en/get_start/`
   安装、导入、基础概念、启动前准备。
 - `references/docs_en/get_elements/`
   locator 和找元素语法。
-- `references/docs_en/demos/`
-  默认优先参考的代码示例来源。
-- `references/docs_en/get_start/examples/`
-  基础示例和模式切换示例。
 - `references/docs_en/features/features_demos/`
   补充特性示例，当前包含 `switch_mode.md`。
 
@@ -68,6 +71,6 @@
 
 1. 是否影响公开导入路径或构造参数。
 2. 是否需要同步 `.pyi`。
-3. 是否影响 `references/docs_en/` 中的示例或参数说明。
+3. 是否影响 `references/docs_zh/` 或 `references/docs_en/` 中的示例或参数说明。
 4. 是否破坏 `WebPage` 的模式语义或 cookie 同步。
 5. 是否影响 `dp` CLI 或 `dp_configs.ini` 生成流程。
