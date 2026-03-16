@@ -134,7 +134,7 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 编写代码时，按以下优先级查阅参考资料：
 
-1. **示例 / Demo 最优先** — `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/`
+1. **示例 / Demo 最优先（强制）** — `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/`。**编写 DrissionPage 代码时必须参考 demo 示例并严格遵循其代码风格。**
 2. **中文文档其次** — `references/docs_zh/`（入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例）
 3. **英文文档补充** — `references/docs_en/` 其余文件
 
