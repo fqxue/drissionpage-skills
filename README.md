@@ -25,13 +25,16 @@ skills/
         ├── architecture.md         # 架构速览：包结构、核心对象、高影响模块
         ├── docs-map.md             # 文档映射与常见任务执行手册
         ├── bundled-materials.md    # 已打包到 Skill 内的资料清单
+        ├── chrome-devtools-mcp.md  # Chrome DevTools MCP 协作与接入说明
         ├── docs_zh/                # DrissionPage 中文文档（优先级高于 docs_en）
-        │   ├── 入门指南/           # 安装、导入、基本概念、模式切换等
-        │   ├── 控制浏览器/         # 浏览器控制、元素交互、定位语法等
-        │   ├── SessionPage/        # SessionPage 相关文档
-        │   ├── 下载文件/           # 文件下载相关
-        │   ├── 进阶使用/           # 全局设置、命令行、打包等
-        │   └── 特性与示例/         # 特性介绍与对比示例
+        │   ├── README.md           # 中文文档总览
+        │   ├── index.json          # 文档索引
+        │   ├── 入门指南/           # 安装、导入、基本概念、模式切换等（10 个文件）
+        │   ├── 控制浏览器/         # 浏览器控制、元素交互、定位语法等（33 个文件）
+        │   ├── SessionPage/        # SessionPage 相关文档（9 个文件）
+        │   ├── 下载文件/           # 文件下载相关（4 个文件）
+        │   ├── 进阶使用/           # 全局设置、命令行、打包等（9 个文件）
+        │   └── 特性与示例/         # 特性介绍与对比示例（10 个文件）
         └── docs_en/                # 英文文档副本（含示例/demo，最优先参考）
             ├── usage_introduction.md
             ├── demos/              # 实战示例（豆瓣、猫眼、星巴克等）⬅ 最优先
@@ -50,6 +53,7 @@ skills/
 | `architecture.md` | 快速了解 DrissionPage 包结构、三大 Page 对象关系和改动检查清单 |
 | `docs-map.md` | 根据任务类型快速映射到对应的参考文档，包含常见任务的执行步骤 |
 | `bundled-materials.md` | 列出所有已复制到技能包内的文档（docs_en 和 docs_zh），确保脱离原仓库也能独立工作 |
+| `chrome-devtools-mcp.md` | Chrome DevTools MCP 协作与接入说明，含协作流程和交接模板 |
 
 ## 安装
 
