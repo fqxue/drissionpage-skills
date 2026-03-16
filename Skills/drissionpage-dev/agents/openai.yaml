@@ -1,4 +1,4 @@
 interface:
   display_name: "DrissionPage 开发"
-  short_description: "基于源码与 docs_en 的 DrissionPage 开发协作"
-  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。"
+  short_description: "基于源码、示例、docs_zh 与 docs_en 的 DrissionPage 开发协作"
+  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。编写代码时优先参考示例/demo，其次参考中文文档(docs_zh)，再其次参考英文文档(docs_en)。"

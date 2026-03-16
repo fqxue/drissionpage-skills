@@ -25,11 +25,18 @@ Skills/
         ├── architecture.md         # 架构速览：包结构、核心对象、高影响模块
         ├── docs-map.md             # 文档映射与常见任务执行手册
         ├── bundled-materials.md    # 已打包到 Skill 内的资料清单
-        └── docs_en/                # 从 DrissionPage 仓库复制的文档副本
+        ├── docs_zh/                # DrissionPage 中文文档（优先级高于 docs_en）
+        │   ├── 入门指南/           # 安装、导入、基本概念、模式切换等
+        │   ├── 控制浏览器/         # 浏览器控制、元素交互、定位语法等
+        │   ├── SessionPage/        # SessionPage 相关文档
+        │   ├── 下载文件/           # 文件下载相关
+        │   ├── 进阶使用/           # 全局设置、命令行、打包等
+        │   └── 特性与示例/         # 特性介绍与对比示例
+        └── docs_en/                # 英文文档副本（含示例/demo，最优先参考）
             ├── usage_introduction.md
-            ├── demos/              # 实战示例（豆瓣、猫眼、星巴克等）
+            ├── demos/              # 实战示例（豆瓣、猫眼、星巴克等）⬅ 最优先
             ├── get_start/          # 入门指南（概念、导入、准备工作）
-            │   └── examples/       # 基础示例（浏览器控制、数据包、模式切换）
+            │   └── examples/       # 基础示例（浏览器控制、数据包、模式切换）⬅ 最优先
             ├── get_elements/       # 元素定位与查找语法
             └── features/
                 └── features_demos/ # 特性演示（模式切换）
@@ -42,7 +49,7 @@ Skills/
 | `SKILL.md` | 技能入口，定义了 AI 处理 DrissionPage 任务的完整流程、规则和验证方式 |
 | `architecture.md` | 快速了解 DrissionPage 包结构、三大 Page 对象关系和改动检查清单 |
 | `docs-map.md` | 根据任务类型快速映射到对应的参考文档，包含常见任务的执行步骤 |
-| `bundled-materials.md` | 列出所有已复制到技能包内的文档，确保脱离原仓库也能独立工作 |
+| `bundled-materials.md` | 列出所有已复制到技能包内的文档（docs_en 和 docs_zh），确保脱离原仓库也能独立工作 |
 
 ## 使用方式
 
@@ -76,6 +83,14 @@ Skills/
 | `SessionPage` | 纯请求/解析，围绕 requests、response、headers 工作 |
 | `WebPage` | 双模式（d/s），同时继承浏览器控制和请求解析，支持 cookie 同步 |
 
+## 参考优先级
+
+编写代码时，按以下优先级查阅参考资料：
+
+1. **示例 / Demo 最优先** — `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/`
+2. **中文文档其次** — `references/docs_zh/`（入门指南、控制浏览器、SessionPage、下载文件、进阶使用、特性与示例）
+3. **英文文档补充** — `references/docs_en/` 其余文件
+
 ## 参考示例
 
 技能包内置了多个实战示例（位于 `references/docs_en/demos/`）：
@@ -90,7 +105,7 @@ Skills/
 
 欢迎提交 PR 来改进技能包：
 
-1. 新增或更新 `references/docs_en/` 下的文档副本时，同步更新 `bundled-materials.md`
+1. 新增或更新 `references/docs_en/` 或 `references/docs_zh/` 下的文档副本时，同步更新 `bundled-materials.md`
 2. 修改工作流程或规则时，更新 `SKILL.md` 中的对应部分
 3. 新增示例时，优先复用已有写法和命名风格
 4. 使用中文编写注释和说明
