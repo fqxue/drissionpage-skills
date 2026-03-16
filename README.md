@@ -51,200 +51,54 @@ Skills/
 | `docs-map.md` | 根据任务类型快速映射到对应的参考文档，包含常见任务的执行步骤 |
 | `bundled-materials.md` | 列出所有已复制到技能包内的文档（docs_en 和 docs_zh），确保脱离原仓库也能独立工作 |
 
-## 安装与使用
+## 安装
 
-本技能包支持多种 AI 编程助手。以下详细介绍在 **OpenAI Codex CLI** 和 **Anthropic Claude Code** 中的安装与使用方法。
+本仓库遵循 [Agent Skills 规范](https://agentskills.io/specification)，可用于 Claude Code、Codex CLI、OpenCode 等兼容技能的 AI 编程助手。
 
----
-
-### 在 OpenAI Codex CLI 中使用
-
-[Codex CLI](https://github.com/openai/codex) 是 OpenAI 推出的终端 AI 编程助手，通过 `AGENTS.md` 文件加载项目级指令。
-
-#### 第一步：安装 Codex CLI
+### npx skills（推荐）
 
 ```bash
-npm install -g @openai/codex
+npx skills add git@github.com:fqxue/drissionpage-skills.git
 ```
 
-确保已设置 `OPENAI_API_KEY` 环境变量：
+### 手动安装
+
+#### Claude Code
+
+将仓库完整克隆到 Claude skills 目录（全局或项目内均可）：
 
 ```bash
-export OPENAI_API_KEY="your-api-key"
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/drissionpage-skills
 ```
 
-#### 第二步：将技能包引入项目
+#### Codex CLI
 
-进入你的 DrissionPage 项目目录，将本仓库的技能包复制进去：
+将仓库完整克隆到 Codex skills 目录：
 
 ```bash
-cd /path/to/your-drissionpage-project
-
-# 方式 A：克隆整个仓库到项目中
-git clone https://github.com/fqxue/drissionpage-skills.git .drissionpage-skills
-
-# 方式 B：只复制 Skills 目录
-cp -r /path/to/drissionpage-skills/Skills ./Skills
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-skills
 ```
 
-#### 第三步：创建 AGENTS.md 配置文件
+#### OpenCode
 
-在项目根目录创建 `AGENTS.md`，引用技能包中的指令：
+将仓库完整克隆到 OpenCode skills 目录：
+
+```bash
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/drissionpage-skills
+```
+
+请不要只复制内部 `Skills/` 目录，需保留完整仓库结构，确保技能入口路径为 `.../drissionpage-skills/Skills/drissionpage-dev/SKILL.md`。
+
+### 项目内引用（可选）
+
+如果你更习惯在项目内显式声明规则，可在 `AGENTS.md` 或 `CLAUDE.md` 中加入以下内容：
 
 ```markdown
-# DrissionPage 开发指引
-
-处理 DrissionPage 相关任务时，请遵循以下技能包中的规范和流程。
-
-## 参考资料位置
-
-- 技能入口定义：`Skills/drissionpage-dev/SKILL.md`
-- 架构速览：`Skills/drissionpage-dev/references/architecture.md`
-- 文档映射：`Skills/drissionpage-dev/references/docs-map.md`
-
-## 参考优先级
-
-编写代码时，按以下优先级查阅参考资料：
-
-1. **示例 / Demo 最优先** — `Skills/drissionpage-dev/references/docs_en/demos/` 和 `Skills/drissionpage-dev/references/docs_en/get_start/examples/`
-2. **中文文档其次** — `Skills/drissionpage-dev/references/docs_zh/`
-3. **英文文档补充** — `Skills/drissionpage-dev/references/docs_en/` 其余文件
-
-## 核心规则
-
-- 以源码为准，用文档核对公开行为和参数语义
-- 保持改动局部化，优先延续现有分层和命名
-- 公开 API 变化时同步检查 `.pyi`、`__init__.py` 和文档示例
-- 不要混淆 ChromiumPage（浏览器控制）、SessionPage（请求/解析）、WebPage（双模式）的职责
+处理 DrissionPage 相关任务时，优先参考：
+1. Skills/drissionpage-dev/references/docs_en/demos/
+2. Skills/drissionpage-dev/references/docs_zh/
+3. Skills/drissionpage-dev/references/docs_en/ 其余文件
 ```
-
-#### 第四步：启动 Codex
-
-```bash
-# 在项目目录下直接启动交互式会话
-codex
-
-# 或直接传入任务
-codex "帮我用 ChromiumPage 写一个自动登录脚本"
-```
-
-Codex 会自动读取 `AGENTS.md` 和技能包中的参考文件，按照 `SKILL.md` 定义的流程处理 DrissionPage 相关任务。
-
-#### 进阶：全局配置（可选）
-
-如果你经常在多个项目中使用 DrissionPage，可以在全局指令文件中添加通用说明：
-
-```bash
-# 编辑全局指令
-vi ~/.codex/instructions.md
-```
-
-在文件中添加：
-
-```markdown
-处理 DrissionPage 任务时，优先查阅项目内 Skills/drissionpage-dev/ 目录下的技能包。
-```
-
----
-
-### 在 Anthropic Claude Code 中使用
-
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 是 Anthropic 推出的终端 AI 编程助手，通过 `CLAUDE.md` 文件加载项目级指令。
-
-#### 第一步：安装 Claude Code
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-确保已设置 `ANTHROPIC_API_KEY` 环境变量：
-
-```bash
-export ANTHROPIC_API_KEY="your-api-key"
-```
-
-#### 第二步：将技能包引入项目
-
-进入你的 DrissionPage 项目目录，将本仓库的技能包复制进去（与 Codex 方式相同）：
-
-```bash
-cd /path/to/your-drissionpage-project
-
-# 方式 A：克隆整个仓库到项目中
-git clone https://github.com/fqxue/drissionpage-skills.git .drissionpage-skills
-
-# 方式 B：只复制 Skills 目录
-cp -r /path/to/drissionpage-skills/Skills ./Skills
-```
-
-#### 第三步：创建 CLAUDE.md 配置文件
-
-在项目根目录创建 `CLAUDE.md`，引用技能包中的指令：
-
-```markdown
-# DrissionPage 开发指引
-
-处理 DrissionPage 相关任务时，请遵循以下技能包中的规范和流程。
-
-## 参考资料位置
-
-- 技能入口定义：`Skills/drissionpage-dev/SKILL.md`
-- 架构速览：`Skills/drissionpage-dev/references/architecture.md`
-- 文档映射：`Skills/drissionpage-dev/references/docs-map.md`
-
-## 参考优先级
-
-编写代码时，按以下优先级查阅参考资料：
-
-1. **示例 / Demo 最优先** — `Skills/drissionpage-dev/references/docs_en/demos/` 和 `Skills/drissionpage-dev/references/docs_en/get_start/examples/`
-2. **中文文档其次** — `Skills/drissionpage-dev/references/docs_zh/`
-3. **英文文档补充** — `Skills/drissionpage-dev/references/docs_en/` 其余文件
-
-## 核心规则
-
-- 以源码为准，用文档核对公开行为和参数语义
-- 保持改动局部化，优先延续现有分层和命名
-- 公开 API 变化时同步检查 `.pyi`、`__init__.py` 和文档示例
-- 不要混淆 ChromiumPage（浏览器控制）、SessionPage（请求/解析）、WebPage（双模式）的职责
-```
-
-#### 第四步：启动 Claude Code
-
-```bash
-# 在项目目录下启动交互式会话
-claude
-
-# 或直接传入任务
-claude "帮我用 ChromiumPage 写一个自动登录脚本"
-```
-
-Claude Code 会自动读取 `CLAUDE.md` 和技能包中的参考文件，按照定义的流程处理 DrissionPage 相关任务。
-
-#### 进阶：使用 /add-memory 持久化指令（可选）
-
-在 Claude Code 交互式会话中，你可以用 `/add-memory` 命令将常用指令写入持久记忆：
-
-```
-/add-memory "处理 DrissionPage 任务时，优先查阅项目内 Skills/drissionpage-dev/ 目录下的技能包。编写代码时按优先级参考：① 示例/demo → ② 中文文档(docs_zh) → ③ 英文文档(docs_en)。"
-```
-
-这条记忆会被保存到 `~/.claude/CLAUDE.md` 中，在所有项目中生效。
-
-#### 进阶：全局配置（可选）
-
-如果你经常在多个项目中使用 DrissionPage，也可以直接编辑全局指令文件：
-
-```bash
-vi ~/.claude/CLAUDE.md
-```
-
-在文件中添加：
-
-```markdown
-处理 DrissionPage 任务时，优先查阅项目内 Skills/drissionpage-dev/ 目录下的技能包。
-```
-
----
 
 ### 触发条件
 
