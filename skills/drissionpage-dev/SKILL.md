@@ -1,7 +1,7 @@
 ---
 name: drissionpage-dev
 description: >-
-  针对 DrissionPage 仓库进行源码阅读、功能修改、调试、示例编写、文档对照和兼容性修复。
+  针对 DrissionPage 进行示例参考、功能编写、调试、文档对照和兼容性修复；优先参考 demo 示例，其次中文文档，最后英文文档，非必要不阅读源码。
 triggers:
   - DrissionPage
   - ChromiumPage
@@ -183,50 +183,11 @@ page.download(img_url, r'.\imgs', rename=name)
 
 ## 快速流程
 
-```mermaid
-flowchart TD
-    START["🎯 收到 DrissionPage 任务"] --> JUDGE{"判断改动落点"}
-
-    JUDGE -->|"页面对象 / 模式切换"| A["📖 读 architecture.md<br/>→ _pages/"]
-    JUDGE -->|"元素定位 / 解析"| B["📖 读 locator.py<br/>→ _elements/"]
-    JUDGE -->|"配置 / CLI"| C["📖 读 _configs/<br/>→ cli.py / tools.py"]
-    JUDGE -->|"示例 / 文档"| D["📖 读 docs_en/demos/<br/>→ docs_zh/"]
-
-    A --> VERIFY
-    B --> VERIFY
-    C --> VERIFY
-    D --> VERIFY
-
-    VERIFY["📋 以源码为准核对文档"] --> CHANGE["✏️ 局部化改动"]
-    CHANGE --> SYNC{"需要同步？"}
-    SYNC -->|"是"| SYNC_FILES[".pyi / __init__ / docs"]
-    SYNC -->|"否"| TEST
-    SYNC_FILES --> TEST["✅ Smoke Test 验证"]
-
-    style START fill:#e8eaf6,stroke:#3f51b5,color:#1a237e
-    style JUDGE fill:#fff3e0,stroke:#ef6c00,color:#e65100
-    style VERIFY fill:#e1f5fe,stroke:#0288d1,color:#01579b
-    style CHANGE fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
-    style SYNC fill:#fce4ec,stroke:#c62828,color:#b71c1c
-    style TEST fill:#e0f2f1,stroke:#00695c,color:#004d40
-```
-
-1. 先判断改动落点，再读取最小必要文件。
-- 页面对象与模式切换：读 `references/architecture.md`，再看 `DrissionPage/_pages/`。
-- 元素定位与解析：看 `DrissionPage/_functions/locator.py`、`DrissionPage/_elements/`，必要时对照 `references/docs_zh/控制浏览器/` 和 `references/docs_en/get_elements/`。
-- 浏览器启动、配置和 CLI：看 `DrissionPage/_configs/`、`DrissionPage/_functions/tools.py`、`DrissionPage/_functions/cli.py`。
-- 对外行为和示例：优先读取 skill 内已复制的示例和 `references/docs_zh/`，再用 `references/docs_en/` 补充，不要依赖 skill 外部文档路径。
-
-2. 以源码为准，用 `references/docs_zh/` 和 `references/docs_en/` 核对公开行为、参数语义和示例。
-
-3. 公开 API 一旦变化，同步检查这些位置。
-- 对应模块的 `.pyi`
-- `DrissionPage/__init__.py` 和 `DrissionPage/__init__.pyi`
-- 受影响的 `references/docs_zh/` 和 `references/docs_en/` 示例或说明
-
-4. 如果用户没有特别指定参考来源，优先从 `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/` 提取代码结构、对象选型和调用顺序；其次从 `references/docs_zh/` 获取详细用法和参数说明；再落到源码实现核对细节。
-
-5. 保持改动局部化，优先延续现有分层和命名，不随意重排内部 `_` 模块职责。
+1. 优先从 `references/docs_en/demos/` 和 `references/docs_en/get_start/examples/` 提取代码结构、对象选型和调用顺序。
+2. 示例不足时，查阅 `references/docs_zh/` 获取详细用法和参数说明。
+3. 中文文档仍不满足时，再查 `references/docs_en/` 其余文件补充。
+4. 非必要不阅读源码；只有在文档与实际行为明显不符时，才酌情核对源码实现。
+5. 保持改动局部化，优先延续现有写法和命名，不随意自创调用链。
 
 ## 仓库内规则
 
