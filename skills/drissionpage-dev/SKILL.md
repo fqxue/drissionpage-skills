@@ -2,10 +2,19 @@
 name: drissionpage-dev
 description: >-
   针对 DrissionPage 仓库进行源码阅读、功能修改、调试、示例编写、文档对照和兼容性修复。
-  Trigger: tasks mention DrissionPage, ChromiumPage, SessionPage, WebPage,
-  ChromiumOptions, SessionOptions, locator 语法, dp CLI, dp_configs.ini,
-  docs_en, docs_zh, `.pyi` 类型声明，或要求基于仓库源码/文档实现新功能、
-  修复行为、核对 API、补文档示例。
+triggers:
+  - DrissionPage
+  - ChromiumPage
+  - SessionPage
+  - WebPage
+  - ChromiumOptions
+  - SessionOptions
+  - locator 语法
+  - dp CLI
+  - dp_configs.ini
+  - docs_en
+  - docs_zh
+  - .pyi 类型声明
 ---
 
 # DrissionPage Dev
