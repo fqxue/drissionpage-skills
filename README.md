@@ -94,7 +94,20 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/dris
 将 skill 安装到 Codex skills 目录（安装后入口应为 `~/.codex/skills/drissionpage-dev/SKILL.md`）：
 
 ```bash
-git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-dev && cp -a ~/.codex/skills/drissionpage-dev/skills/drissionpage-dev/. ~/.codex/skills/drissionpage-dev/ && rm -rf ~/.codex/skills/drissionpage-dev/skills ~/.codex/skills/drissionpage-dev/.git
+# 1) 克隆仓库到 Codex skills 目录
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-skills-temp
+# 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
+  echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
+  exit 1
+fi
+if [ -d ~/.codex/skills/drissionpage-dev ]; then
+  echo "检测到已有安装，请先备份并手动删除 ~/.codex/skills/drissionpage-dev 后再执行"
+  exit 1
+fi
+mv ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.codex/skills/drissionpage-dev
+# 3) 清理临时克隆目录
+rm -rf ~/.codex/skills/drissionpage-skills-temp
 ```
 
 </details>
