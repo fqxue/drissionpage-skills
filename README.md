@@ -80,10 +80,23 @@ npx skills add git@github.com:fqxue/drissionpage-skills.git
 <details>
 <summary><strong>Claude Code</strong></summary>
 
-将仓库完整克隆到 Claude skills 目录（全局或项目内均可）：
+将 skill 安装到 Claude skills 目录（安装后入口应为 `~/.claude/skills/drissionpage-dev/SKILL.md`）：
 
 ```bash
-git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/drissionpage-skills
+# 1) 克隆仓库到 Claude skills 目录
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/drissionpage-skills-temp
+# 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.claude/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
+  echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
+  exit 1
+fi
+if [ -d ~/.claude/skills/drissionpage-dev ]; then
+  echo "检测到已有安装，请先备份并手动删除 ~/.claude/skills/drissionpage-dev 后再执行"
+  exit 1
+fi
+mv ~/.claude/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.claude/skills/drissionpage-dev
+# 3) 清理临时克隆目录
+rm -rf ~/.claude/skills/drissionpage-skills-temp
 ```
 
 </details>
@@ -115,17 +128,33 @@ rm -rf ~/.codex/skills/drissionpage-skills-temp
 <details>
 <summary><strong>OpenCode</strong></summary>
 
-将仓库完整克隆到 OpenCode skills 目录：
+将 skill 安装到 OpenCode skills 目录（安装后入口应为 `~/.opencode/skills/drissionpage-dev/SKILL.md`）：
 
 ```bash
-git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/drissionpage-skills
+# 1) 克隆仓库到 OpenCode skills 目录
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/drissionpage-skills-temp
+# 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.opencode/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
+  echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
+  exit 1
+fi
+if [ -d ~/.opencode/skills/drissionpage-dev ]; then
+  echo "检测到已有安装，请先备份并手动删除 ~/.opencode/skills/drissionpage-dev 后再执行"
+  exit 1
+fi
+mv ~/.opencode/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.opencode/skills/drissionpage-dev
+# 3) 清理临时克隆目录
+rm -rf ~/.opencode/skills/drissionpage-skills-temp
 ```
 
 </details>
 
 > **注意：**
-> - Codex CLI 安装后请确认技能入口路径为 `~/.codex/skills/drissionpage-dev/SKILL.md`（Windows 参考：`C:\Users\<用户名>\.codex\skills\drissionpage-dev\SKILL.md`）。
-> - Claude Code 和 OpenCode 可按上方方式保留完整仓库结构安装。
+> - 三个平台安装后请确认技能入口路径分别为：
+>   - Claude Code：`~/.claude/skills/drissionpage-dev/SKILL.md`
+>   - Codex CLI：`~/.codex/skills/drissionpage-dev/SKILL.md`
+>   - OpenCode：`~/.opencode/skills/drissionpage-dev/SKILL.md`
+> - Windows 路径参考：`C:\Users\<用户名>\.{claude|codex|opencode}\skills\drissionpage-dev\SKILL.md`。
 
 ### 项目内引用（可选）
 
