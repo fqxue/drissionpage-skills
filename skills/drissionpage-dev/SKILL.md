@@ -198,8 +198,8 @@ page.download(img_url, r'.\imgs', rename=name)
   `WebPage` 负责 d/s 双模式与 cookie 同步。
 - 生成示例代码时，默认先复用实战示例中已经验证过的写法，再按当前任务收缩或扩展，不要无依据自创新调用链。
 - 处理配置或安装问题时，优先参考 `setup.py`、`requirements.txt` 和实际代码；仓库内的 `pyproject.toml` 可能只是本地工作区配置，不要直接把它当成发布事实。
-- 需要与 `chrome-devtools-mcp` 协作时，优先复用 DrissionPage 的 CDP 能力（`references/docs/控制浏览器/🛰️ 页面交互.md` 中 `cdp()` 方法），并说明当前步骤由 DrissionPage 还是 MCP 执行，避免职责混淆。
-- 默认采用“三段式协作”：① DrissionPage 复现并最小化自动化步骤 → ② MCP 做 DevTools 诊断（Network/Performance/Console）→ ③ 回到 DrissionPage 落地修复与回归验证。
+- 需要调试浏览器或分析网站时，优先使用 `chrome-devtools-mcp`（或用户已提供的同类 MCP）；仅在 MCP 工具不可用时，才回退到 DrissionPage 的 CDP 能力（`references/docs/控制浏览器/🛰️ 页面交互.md` 中 `cdp()`/`run_cdp()` 方法）。
+- 默认采用“三段式协作”：① 优先用 MCP 做 DevTools 诊断（Network/Performance/Console）→ ② DrissionPage 复现并最小化自动化步骤 → ③ 回到 DrissionPage 落地修复与回归验证。
 - 协作交接时至少包含：目标 URL、最小复现步骤、关键定位信息（selector/请求名）、期望与实际差异、错误文本；减少在 DrissionPage 与 MCP 之间重复试错。
 
 ## 验证方式
