@@ -138,11 +138,12 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 ```mermaid
 flowchart LR
-    A["🎯 判断改动落点"] --> B["📂 读取最小必要文件"]
-    B --> C["📋 以源码为准<br/>核对文档"]
-    C --> D["✏️ 改动局部化"]
-    D --> E["🔗 同步联动文件"]
-    E --> F["✅ 验证"]
+    A["1️⃣ 用户提出需求"] --> B["2️⃣ AI 理解并拆解需求"]
+    B --> C["3️⃣ 先用 Chrome DevTools MCP 调试网页<br/>梳理爬取流程"]
+    C --> D["4️⃣ 准备使用 DrissionPage 设计实现"]
+    D --> E["5️⃣ 查询文档确认用法<br/>实战示例→入门指南→其余文档"]
+    E --> F["6️⃣ 编写代码并调试<br/>优先参考文档与示例"]
+    F --> G["7️⃣ 完成任务并验证结果"]
 
     style A fill:#e1f5fe,stroke:#0288d1,color:#01579b
     style B fill:#f3e5f5,stroke:#7b1fa2,color:#4a148c
@@ -150,6 +151,7 @@ flowchart LR
     style D fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
     style E fill:#fce4ec,stroke:#c62828,color:#b71c1c
     style F fill:#e0f2f1,stroke:#00695c,color:#004d40
+    style G fill:#ede7f6,stroke:#5e35b1,color:#311b92
 ```
 
 详细流程参见 [`SKILL.md`](skills/drissionpage-dev/SKILL.md)。
