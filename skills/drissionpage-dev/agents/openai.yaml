@@ -1,4 +1,4 @@
 interface:
   display_name: "DrissionPage 开发"
   short_description: "基于统一中文参考文档的 DrissionPage 开发协作；优先参考实战示例，其次各栏目文档，非必要不阅读源码"
-  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。编写 DrissionPage 代码时必须严格参考实战示例的代码风格（references/docs/实战示例/），不允许偏离示例已验证的写法。其次参考各栏目文档（references/docs/），非必要不阅读源码。"
+  default_prompt: "使用 $drissionpage-dev 处理当前仓库中的 DrissionPage 代码、文档或调试任务。编写 DrissionPage 代码时建议优先参考实战示例的代码风格（references/docs/实战示例/），优先复用示例中已验证的写法。其次参考各栏目文档（references/docs/），非必要不阅读源码。"

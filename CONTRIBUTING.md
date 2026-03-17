@@ -14,7 +14,7 @@
 
 ### 文档更新
 
-- 新增或更新 `references/docs/` 下的文档时，**必须**同步更新 `bundled-materials.md` 中的清单
+- 新增或更新 `references/docs/` 下的文档时，建议同步更新 `bundled-materials.md` 中的清单
 - 新增文档时，同步更新 `references/docs/index.json`（使用 POSIX 路径分隔符 `/`）
 - 文档文件名直接使用标题（含 emoji 前缀），与官网保持一致
 
@@ -28,7 +28,7 @@
 
 - 新增示例时，优先复用已有写法和命名风格
 - 使用中文编写注释和说明
-- 严格遵循 `SKILL.md` 中的"代码风格规范（强制）"章节
+- 参考遵循 `SKILL.md` 中的“代码风格规范”章节
 
 ### Agent 配置
 
