@@ -91,10 +91,23 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/dris
 <details>
 <summary><strong>Codex CLI</strong></summary>
 
-将仓库完整克隆到 Codex skills 目录：
+将 skill 安装到 Codex skills 目录（安装后入口应为 `~/.codex/skills/drissionpage-dev/SKILL.md`）：
 
 ```bash
-git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-skills
+# 1) 克隆仓库到 Codex skills 目录
+git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-skills-temp
+# 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
+  echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
+  exit 1
+fi
+if [ -d ~/.codex/skills/drissionpage-dev ]; then
+  echo "检测到已有安装，请先备份并手动删除 ~/.codex/skills/drissionpage-dev 后再执行"
+  exit 1
+fi
+mv ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.codex/skills/drissionpage-dev
+# 3) 清理临时克隆目录
+rm -rf ~/.codex/skills/drissionpage-skills-temp
 ```
 
 </details>
@@ -110,7 +123,9 @@ git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/dr
 
 </details>
 
-> **注意：** 请不要只复制内部 `skills/` 目录，需保留完整仓库结构，确保技能入口路径为 `.../drissionpage-skills/skills/drissionpage-dev/SKILL.md`。
+> **注意：**
+> - Codex CLI 安装后请确认技能入口路径为 `~/.codex/skills/drissionpage-dev/SKILL.md`（Windows 参考：`C:\Users\<用户名>\.codex\skills\drissionpage-dev\SKILL.md`）。
+> - Claude Code 和 OpenCode 可按上方方式保留完整仓库结构安装。
 
 ### 项目内引用（可选）
 
