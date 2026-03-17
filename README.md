@@ -86,12 +86,17 @@ npx skills add git@github.com:fqxue/drissionpage-skills.git
 # 1) 克隆仓库到 Claude skills 目录
 git clone https://github.com/fqxue/drissionpage-skills.git ~/.claude/skills/drissionpage-skills-temp
 # 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.claude/skills/drissionpage-skills-temp ]; then
+  echo "仓库克隆失败，请检查网络或目标路径权限后重试"
+  exit 1
+fi
 if [ ! -d ~/.claude/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
   echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
   exit 1
 fi
 if [ -d ~/.claude/skills/drissionpage-dev ]; then
   echo "检测到已有安装，请先备份并手动删除 ~/.claude/skills/drissionpage-dev 后再执行"
+  rm -rf ~/.claude/skills/drissionpage-skills-temp
   exit 1
 fi
 mv ~/.claude/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.claude/skills/drissionpage-dev
@@ -110,12 +115,17 @@ rm -rf ~/.claude/skills/drissionpage-skills-temp
 # 1) 克隆仓库到 Codex skills 目录
 git clone https://github.com/fqxue/drissionpage-skills.git ~/.codex/skills/drissionpage-skills-temp
 # 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.codex/skills/drissionpage-skills-temp ]; then
+  echo "仓库克隆失败，请检查网络或目标路径权限后重试"
+  exit 1
+fi
 if [ ! -d ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
   echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
   exit 1
 fi
 if [ -d ~/.codex/skills/drissionpage-dev ]; then
   echo "检测到已有安装，请先备份并手动删除 ~/.codex/skills/drissionpage-dev 后再执行"
+  rm -rf ~/.codex/skills/drissionpage-skills-temp
   exit 1
 fi
 mv ~/.codex/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.codex/skills/drissionpage-dev
@@ -134,12 +144,17 @@ rm -rf ~/.codex/skills/drissionpage-skills-temp
 # 1) 克隆仓库到 OpenCode skills 目录
 git clone https://github.com/fqxue/drissionpage-skills.git ~/.opencode/skills/drissionpage-skills-temp
 # 2) 校验并移动 skill 目录到目标路径
+if [ ! -d ~/.opencode/skills/drissionpage-skills-temp ]; then
+  echo "仓库克隆失败，请检查网络或目标路径权限后重试"
+  exit 1
+fi
 if [ ! -d ~/.opencode/skills/drissionpage-skills-temp/skills/drissionpage-dev ]; then
   echo "未找到 skills/drissionpage-dev，请检查仓库结构后重试"
   exit 1
 fi
 if [ -d ~/.opencode/skills/drissionpage-dev ]; then
   echo "检测到已有安装，请先备份并手动删除 ~/.opencode/skills/drissionpage-dev 后再执行"
+  rm -rf ~/.opencode/skills/drissionpage-skills-temp
   exit 1
 fi
 mv ~/.opencode/skills/drissionpage-skills-temp/skills/drissionpage-dev ~/.opencode/skills/drissionpage-dev
