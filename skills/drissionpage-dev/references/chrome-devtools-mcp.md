@@ -16,14 +16,16 @@
 
 ## 标准协作流程
 
-1. **DrissionPage 先复现**  
+1. **MCP 先诊断（优先）**  
+   涉及浏览器调试或网站分析时，优先在 DevTools 侧查看 Console/Network/Performance，快速定位失败阶段与根因线索。
+2. **DrissionPage 复现补充**  
    用最小脚本稳定复现问题，并保留 URL、关键 selector、请求名、报错文本。
-2. **MCP 做诊断**  
-   在 DevTools 侧查看 Console/Network/Performance，定位失败阶段与根因线索。
 3. **DrissionPage 落地修复**  
    把诊断结论转成代码调整（等待策略、定位策略、流程顺序、配置参数）。
 4. **双向回归确认**  
    DrissionPage 再跑自动化流程；必要时让 MCP 复核关键网络请求与控制台状态。
+
+> 若 `chrome-devtools-mcp`（或用户已提供的同类 MCP）不可用，再回退到 DrissionPage 的 `cdp()`/`run_cdp()` 能力完成临时诊断。  
 
 > 建议每一步都输出“工具 + 结论 + 下一步”，避免职责重叠。  
 > 例如：
