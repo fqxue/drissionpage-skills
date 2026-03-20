@@ -19,10 +19,10 @@
 
 ## 安装到 Codex
 
-如果你是从 GitHub 仓库下载这个 skill，目录通常会是 `skills/drissionpage-dev/`。下载完成后，把整个 `drissionpage-dev` 文件夹复制到你本机的 Codex 技能目录中即可。
+如果你是从 GitHub 仓库下载这个 skill，下载完成后，把仓库根目录下的 `drissionpage-dev` 文件夹复制到你本机的 Codex 技能目录中即可。仓库根目录的 `README.md` 仅用于仓库说明，不需要复制到技能目录。
 
 1. 下载或克隆仓库。
-2. 打开仓库里的 `skills/drissionpage-dev/`。
+2. 打开仓库根目录下的 `drissionpage-dev/`。
 3. 复制整个 `drissionpage-dev` 文件夹。
 4. 粘贴到本机 Codex 技能目录：
    - Windows 示例：`C:\Users\你的用户名\.codex\skills\`
@@ -38,6 +38,8 @@
     ├── agents/
     └── references/
 ```
+
+> 说明：仓库根目录的 `README.md` 仅用于仓库文档展示，不属于安装到 `~/.codex/skills/drissionpage-dev/` 的文件。
 
 ## 目录结构
 
