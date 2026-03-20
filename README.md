@@ -35,7 +35,6 @@
 ~/.codex/skills/
 └── drissionpage-dev/
     ├── SKILL.md
-    ├── README.md
     ├── agents/
     └── references/
 ```
@@ -45,7 +44,6 @@
 ```text
 drissionpage-dev/
 ├── SKILL.md
-├── README.md
 ├── agents/
 └── references/
     ├── docs-map.md
