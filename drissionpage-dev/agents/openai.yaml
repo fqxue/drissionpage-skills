@@ -1,0 +1,4 @@
+interface:
+  display_name: "DrissionPage 开发"
+  short_description: "DrissionPage 脚本、调试协作、文档检索与上游维护"
+  default_prompt: "使用 $drissionpage-dev 处理当前任务中的 DrissionPage 脚本编写、网页调试、文档检索或上游仓库维护，并默认先查 docs-map、实战示例和中文文档。"
