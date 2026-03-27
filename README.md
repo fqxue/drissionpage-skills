@@ -51,6 +51,7 @@ drissionpage-dev/
     ├── docs-map.md
     ├── architecture.md
     ├── chrome-devtools-mcp.md
+    ├── bundled-materials.md
     └── docs/
 ```
 
