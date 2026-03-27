@@ -5,21 +5,21 @@
 ## 快速查找表
 
 > 根据你要做的事情，直接找到对应文档。
-> 选中后只打开当前任务真正需要的那几个文件，不要整批扫读整个 `docs/` 树。
+> 选中后只打开当前任务真正需要的那几个文件，不要整批扫读整个 `references/docs/` 树。
 
 | 我想要… | 首选文档 | 补充文档 |
 |---------|----------|----------|
-| 看代码示例写法 | `docs/实战示例/` | `docs/入门指南/🗺️ 自动登录.md`、`docs/入门指南/🗺️ 收发数据包.md`、`docs/入门指南/🗺️ 模式切换.md` |
-| 了解对象关系 / 选型 | `docs/入门指南/☀️ 基本概念.md` | `architecture.md`（仅上游仓库维护时） |
-| 配置浏览器启动 | `docs/控制浏览器/🛰️ 浏览器启动设置.md` | `docs/控制浏览器/🛰️ 连接浏览器.md` |
-| 定位元素 / 查找失败 | `docs/控制浏览器/🔦 定位语法.md` | `docs/控制浏览器/🔦 页面或元素内查找.md`、`docs/控制浏览器/🔦 语法速查表.md` |
-| WebPage / 模式切换 | `docs/入门指南/🗺️ 模式切换.md` | `docs/特性与示例/⭐ 模式切换.md` |
-| SessionPage 用法 | `docs/SessionPage/` | — |
-| 下载文件 | `docs/下载文件/` | `docs/实战示例/🌠 星巴克图片下载.md`、`docs/实战示例/🌠 豆瓣图书封面下载.md` |
-| 全局设置 / 命令行 / 打包 | `docs/进阶使用/` | `architecture.md`（仅上游仓库维护时） |
-| DevTools MCP 协作 | `chrome-devtools-mcp.md` | `docs/控制浏览器/🛰️ 页面交互.md`（`cdp()` 方法） |
+| 看代码示例写法 | `references/docs/实战示例/` | `references/docs/入门指南/🗺️ 自动登录.md`、`references/docs/入门指南/🗺️ 收发数据包.md`、`references/docs/入门指南/🗺️ 模式切换.md` |
+| 了解对象关系 / 选型 | `references/docs/入门指南/☀️ 基本概念.md` | `references/architecture.md`（仅上游仓库维护时） |
+| 配置浏览器启动 | `references/docs/控制浏览器/🛰️ 浏览器启动设置.md` | `references/docs/控制浏览器/🛰️ 连接浏览器.md` |
+| 定位元素 / 查找失败 | `references/docs/控制浏览器/🔦 定位语法.md` | `references/docs/控制浏览器/🔦 页面或元素内查找.md`、`references/docs/控制浏览器/🔦 语法速查表.md` |
+| WebPage / 模式切换 | `references/docs/入门指南/🗺️ 模式切换.md` | `references/docs/特性与示例/⭐ 模式切换.md` |
+| SessionPage 用法 | `references/docs/SessionPage/` | — |
+| 下载文件 | `references/docs/下载文件/` | `references/docs/实战示例/🌠 星巴克图片下载.md`、`references/docs/实战示例/🌠 豆瓣图书封面下载.md` |
+| 全局设置 / 命令行 / 打包 | `references/docs/进阶使用/` | `references/architecture.md`（仅上游仓库维护时） |
+| DevTools MCP 协作 | `references/chrome-devtools-mcp.md` | `references/docs/控制浏览器/🛰️ 页面交互.md`（`cdp()` 方法） |
 
-> 以上路径均相对于 `references/`。所有文档均为中文。
+> 所有文档均为中文。
 
 ## 常见任务执行顺序
 
