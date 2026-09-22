@@ -61,3 +61,4 @@
 
 - DrissionPage >= 4.1.0.0（`pip show drissionpage` 检查）
 - 本机装有 Chrome 或其他 Chromium 内核浏览器（Edge / QQ浏览器 / 360浏览器等）
+- playwright-cli（可选，用于网页结构分析）：安装与配置请自行参考官方文档 https://github.com/microsoft/playwright-cli
