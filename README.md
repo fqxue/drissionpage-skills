@@ -2,6 +2,8 @@
 
 一个用于**编写、修改和审查 DrissionPage 浏览器自动化 / 爬虫代码**的 Agent 技能（Skill）。
 
+> **前置依赖**：本技能必选依赖 [playwright-cli](https://github.com/microsoft/playwright-cli)（用于写代码前对目标网页做结构分析），其安装与配置请自行参考官方文档。
+
 ## 这是什么
 
 本技能让 AI 编码助手在处理 DrissionPage 任务时遵循一套经过实跑验证的规范：
