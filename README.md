@@ -1,79 +1,63 @@
-# drissionpage-dev
+# drissionpage
 
-`drissionpage-dev` 用来处理 DrissionPage 相关的脚本编写、网页调试、示例改写，以及在必要时维护上游仓库中的源码、CLI、类型声明和文档。
+一个用于**编写、修改和审查 DrissionPage 浏览器自动化 / 爬虫代码**的 Agent 技能（Skill）。
 
-## 适用任务
+## 这是什么
 
-- 在普通项目中编写或修改 `ChromiumPage`、`SessionPage`、`WebPage` 脚本
-- 排查页面定位、等待时机、请求监听、下载保存、模式切换等问题
-- 根据现有示例改写自动化脚本或最小复现
-- 维护 DrissionPage 上游仓库中的公开 API、CLI、配置生成、类型声明或文档
+本技能让 AI 编码助手在处理 DrissionPage 任务时遵循一套经过实跑验证的规范：
 
-## 默认工作方式
+- **唯一 API 依据**：以《骚神实战教学代码》（25 课完整存档）为准，只使用文档中验证过的 API，禁止凭记忆编造
+- **平铺过程式代码风格**：不做无意义的抽象封装，产出完整可直接运行的脚本
+- **先分析再动手**：写代码前先用浏览器工具打开目标网页做结构分析，而不是盲写选择器
+- **不确认不编写**：文档未覆盖的 API，强制先读本机已安装的 DrissionPage 库源码确认后再使用
+- **内置踩坑经验**：沉淀了 8 条实跑验证的常见坑与调试经验
 
-1. 先判断当前任务属于普通项目脚本，还是 DrissionPage 上游仓库维护。
-2. 默认先读 `references/docs-map.md`，按任务类型跳到最合适的中文文档和实战示例。
-3. 处理真实网页时，优先用浏览器调试工具确认页面流程、关键 selector、请求名和等待点。
-4. 只有在文档不足且已经明确卡住时，才最小范围例外核对源码或 `.pyi`。
-5. 完成实现后做最小 smoke test，而不是默认跑重型全量验证。
+## 安装
 
-## 安装到 Codex
+把仓库中的 `drissionpage` 文件夹**整体复制**到对应 Agent 的技能目录即可（仓库根目录的 `README.md` 仅供展示，不需要复制）：
 
-如果你是从 GitHub 仓库下载这个 skill，下载完成后，把仓库根目录下的 `drissionpage-dev` 文件夹复制到你本机的 Codex 技能目录中即可。仓库根目录的 `README.md` 仅用于仓库说明，不需要复制到技能目录。
+| 运行环境 | 技能目录 |
+|---|---|
+| DSH Desktop (Windows) | `%APPDATA%\dsh-desktop\harness\skills\` |
+| Codex | `~/.codex/skills/` |
+| Claude Code | `~/.claude/skills/` |
 
-1. 下载或克隆仓库。
-2. 打开仓库根目录下的 `drissionpage-dev/`。
-3. 复制整个 `drissionpage-dev` 文件夹。
-4. 粘贴到本机 Codex 技能目录：
-   - Windows 示例：`C:\Users\你的用户名\.codex\skills\`
-   - macOS / Linux 示例：`~/.codex/skills/`
-5. 重新打开 Codex，或开始一个新会话，让技能被重新加载。
-
-安装完成后，技能目录应类似这样：
+安装完成后的目录结构：
 
 ```text
-~/.codex/skills/
-└── drissionpage-dev/
-    ├── SKILL.md
-    ├── agents/
+<技能目录>/
+└── drissionpage/
+    ├── SKILL.md            # 技能主文件：角色、工作流程、代码风格、编码规范、常见坑、API 速查
     └── references/
+        └── 实战代码.md      # 骚神实战教学代码全文（25 课），唯一 API 依据
 ```
 
-> 说明：仓库根目录的 `README.md` 仅用于仓库文档展示，不属于安装到 `~/.codex/skills/drissionpage-dev/` 的文件。
+重启 Agent 或开启新会话即可生效。
 
-## 目录结构
+## 工作流程
 
-```text
-drissionpage-dev/
-├── SKILL.md
-├── agents/
-└── references/
-    ├── docs-map.md
-    ├── architecture.md
-    ├── chrome-devtools-mcp.md
-    └── docs/
-```
+技能加载后，AI 会按以下流程工作：
 
-## 关键资源
+1. **先读文档再写代码**：动笔前完整阅读 `references/实战代码.md`，禁止跳过这一步
+2. **分析目标网页**：默认用 playwright-cli（有头模式）打开网页做结构分析——快照、定位元素、观察网络请求
+3. **映射示例课**：把需求映射到文档中最接近的示例课，沿用其写法与风格组合代码
+4. **源码确认兜底**：文档里找不到的功能先标注 `# 此处需确认 API`，读已安装库源码确认后再写
+5. **交付前自查**：import 齐全、API 均有出处、变量名英文 snake_case、代码从第一行到最后一行可直接运行
 
-| 资源 | 作用 |
-|------|------|
-| `SKILL.md` | 规定技能的触发条件、默认流程、对象选型和验证边界 |
-| `references/docs-map.md` | 文档导航入口，帮助按任务快速定位到最相关资料 |
-| `references/docs/实战示例/` | 优先参考的写法来源，适合改写脚本和复用模式 |
-| `references/docs/入门指南/` | 补充基本概念、模式切换、请求处理等基础说明 |
-| `references/architecture.md` | 仅在维护上游仓库、排查源码级问题时使用的架构速览 |
+## 内置常见坑（节选）
 
-## 使用要点
+技能中沉淀了 8 条均经实跑验证的调试经验，例如：
 
-- 默认不要把源码和 `.pyi` 当作文档入口。
-- 编写脚本时优先沿用现有示例的对象命名、注释风格和调用习惯。
-- 处理浏览器行为时，优先明确“动作之后该等什么”，避免盲等。
-- 维护上游仓库时，若改动公开 API、CLI、配置文件或类型声明，需要同步检查文档副本是否受影响。
+- `'.xxx'` / `'#xxx'` 是整串精确匹配，**不是 CSS 类名匹配**——多类元素须用 `@class:xxx` 模糊匹配或 `css:` 前缀
+- 页面跳转后旧元素引用全部失效——跳转前必须把数据读成纯 Python 数据
+- `wait.eles_loaded()` 超时不抛异常、只返回 `False`——必须对返回值做判断
+- `.attr('href')` 返回的是绝对化 URL——取链接一律用 `.link`
+- 长循环采集必须对单页操作做异常隔离，配合逐项落盘 + 断点续传
+- 选择器作用域宁窄勿宽，先锁定最小数据容器再取子元素
 
-## 验证建议
+完整清单及 API 速查表见 [`drissionpage/SKILL.md`](drissionpage/SKILL.md)。
 
-- 普通项目脚本：运行最小复现或最小 `DrissionPage` 脚本做 smoke test。
-- 导入或公开签名改动：验证 `ChromiumPage`、`SessionPage`、`WebPage` 是否仍可正常导入。
-- CLI 或配置改动：补测 `dp --configs-to-here` 以及相关浏览器配置流程。
-- 浏览器相关改动：记录本地浏览器路径、端口、配置文件等前提后再回归。
+## 环境要求
+
+- DrissionPage >= 4.1.0.0（`pip show drissionpage` 检查）
+- 本机装有 Chrome 或其他 Chromium 内核浏览器（Edge / QQ浏览器 / 360浏览器等）
